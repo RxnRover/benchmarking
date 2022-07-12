@@ -16,3 +16,14 @@ def rosenbrock(xs):
         sum += term_1 + term_2
 
     return sum
+
+def rosenbrock_min() -> float:
+    """Rosenbrock global minimum in n-dimensions.
+
+    The global minimum is 0 when all inputs are 1.
+
+    :return: Global minimum.
+    :rtype: float
+    """
+
+    return 0
