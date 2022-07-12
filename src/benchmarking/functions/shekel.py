@@ -3,16 +3,16 @@ from typing import List
 import numpy as np
 
 
-def shekel(xs: List[float],
-           m: int = 10,
-           C: np.ndarray = np.array(
-               [[4.0, 1.0, 8.0, 6.0, 3.0, 2.0, 5.0, 8.0, 6.0, 7.0],
-                [4.0, 1.0, 8.0, 6.0, 7.0, 9.0, 3.0, 1.0, 2.0, 3.6],
-                [4.0, 1.0, 8.0, 6.0, 3.0, 2.0, 5.0, 8.0, 6.0, 7.0],
-                [4.0, 1.0, 8.0, 6.0, 7.0, 9.0, 3.0, 1.0, 2.0, 3.6]]),
-           beta: List[float] = [
-               0.1, 0.2, 0.2, 0.4, 0.4, 0.6, 0.3, 0.7, 0.5, 0.5
-           ]):
+def shekel(
+    xs: List[float],
+    m: int = 10,
+    C: np.ndarray = np.array(
+        [[4.0, 1.0, 8.0, 6.0, 3.0, 2.0, 5.0, 8.0, 6.0, 7.0],
+         [4.0, 1.0, 8.0, 6.0, 7.0, 9.0, 3.0, 1.0, 2.0, 3.6],
+         [4.0, 1.0, 8.0, 6.0, 3.0, 2.0, 5.0, 8.0, 6.0, 7.0],
+         [4.0, 1.0, 8.0, 6.0, 7.0, 9.0, 3.0, 1.0, 2.0, 3.6]]),
+    beta: List[float] = [0.1, 0.2, 0.2, 0.4, 0.4, 0.6, 0.3, 0.7, 0.5, 0.5]
+) -> float:
     """Sheckel 4D optimization test function.
 
     Sheckel 4D function with (by default) values of \beta and C
@@ -21,6 +21,17 @@ def shekel(xs: List[float],
 
     Function in LaTeX format:
     f(x) = -\sum_{i=1}^m \bigg(\sum_{j=1}^4(x_j - C_{ji})^2 + \beta_i\bigg)^-1
+
+    :param xs: List of input parameters
+    :type xs: List[float]
+    :param m: 'm' parameter, defaults to 10
+    :type m: int, optional
+    :param C: 'C' array, defaults to np.array( [[4.0, 1.0, 8.0, 6.0, 3.0, 2.0, 5.0, 8.0, 6.0, 7.0], [4.0, 1.0, 8.0, 6.0, 7.0, 9.0, 3.0, 1.0, 2.0, 3.6], [4.0, 1.0, 8.0, 6.0, 3.0, 2.0, 5.0, 8.0, 6.0, 7.0], [4.0, 1.0, 8.0, 6.0, 7.0, 9.0, 3.0, 1.0, 2.0, 3.6]])
+    :type C: np.ndarray, optional
+    :param beta: 'beta' list, defaults to [ 0.1, 0.2, 0.2, 0.4, 0.4, 0.6, 0.3, 0.7, 0.5, 0.5 ]
+    :type beta: List[float], optional
+    :return: Result of calculation
+    :rtype: float
     """
 
     outer_sum = 0
