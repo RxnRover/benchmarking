@@ -1,7 +1,8 @@
 import numpy as np
 
 def hartmann(xs, alpha=None, A=None, P=None):
-    """Hartmann n-Dimensional optimization test function.
+    """Hartmann n-Dimensional optimization test function. This function
+    supports 3 or 6 dimensions.
 
     Hartmann nD function with (by default) values of \alpha, A, and P
     from https://www.sfu.ca/~ssurjano/hart3.html.
@@ -75,3 +76,23 @@ def hartmann(xs, alpha=None, A=None, P=None):
         outer_sum += alpha[i] * np.exp(-inner_sum)
 
     return -outer_sum
+
+def hartmann_min(dimensions: int = 3) -> float:
+    """Hartmann function global minimum. This function supports 3 or 6
+    dimensions.
+
+    :param dimensions: Number of dimensions, defaults to 3
+    :type dimensions: int, optional
+
+    :raises ValueError: Invalid number of dimensions.
+    
+    :return: Global minimum.
+    :rtype: float
+    """
+
+    if (dimensions == 3):
+        return -3.86278
+    elif (dimensions == 6):
+        return -3.32237
+    else:
+        raise ValueError("Invalid dimension count. 3 or 6 dimensions are supported.")

@@ -26,5 +26,4 @@ def goldstein_price_min() -> float:
     :rtype: float
     """
 
-
     return 3
