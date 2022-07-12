@@ -1,3 +1,5 @@
+import numpy as np
+
 def shubert(x_1, x_2):
     """Shubert optimization test function.
 
@@ -16,3 +18,14 @@ def shubert(x_1, x_2):
         term_2 += i * np.cos((i + 1) * x_2 + i)
 
     return term_1 * term_2
+
+def shubert_min() -> float:
+    """Global minimum for the Shubert function.
+
+    Global minimum is -186.7309 at ??? (there are 18 minima).
+
+    :return: Global minimum.
+    :rtype: float
+    """
+
+    return -186.7309
