@@ -1,0 +1,77 @@
+import numpy as np
+
+def hartmann(xs, alpha=None, A=None, P=None):
+    """Hartmann n-Dimensional optimization test function.
+
+    Hartmann nD function with (by default) values of \alpha, A, and P
+    from https://www.sfu.ca/~ssurjano/hart3.html.
+
+    Function in LaTeX format:
+    f(x) = -\sum_{i=1}^{4} \alpha_i \exp{\bigg(-\sum_{j=1}^n A_{ij}(x_j - P_{ij})^2\bigg)}
+    """
+
+    # Validate parameters and set proper default
+    dimensionCount = len(xs)
+    print("{} dimensions provided.".format(dimensionCount))
+
+    # Check for provided alpha value
+    if (alpha == None):
+        print("No alpha detected. Using default.")
+        
+        if (dimensionCount == 3 or dimensionCount == 6):
+            alpha = np.array([1.0, 1.2, 3.0, 3.2])
+        else:
+            print("No default alpha values for {} dimensions.".format(dimensionCount))
+            return None
+
+    # Check for provided A values
+    if (A == None):
+        print("No A values detected. Using default.")
+        
+        if (dimensionCount == 3):
+            A = np.array([[ 3.0, 10, 30 ],
+                          [ 0.1, 10, 35 ],
+                          [ 3.0, 10, 30 ],
+                          [ 0.1, 10, 35 ]])
+        elif (dimensionCount == 6):
+            A = np.array([[ 10,   3,   17,   3.50, 1.7, 8  ],
+                          [ 0.05, 10,  17,   0.1,  8,   14 ],
+                          [ 3,    3.5, 1.7,  10,   17,  8  ],
+                          [ 17,   8,   0.05, 10,   0.1, 14 ]])
+        else:
+            print("No default A values for {} dimensions.".format(dimensionCount))
+            None
+
+    # Check for provided P values
+    if (P == None):
+        print("No P values detected. Using default.")
+        
+        if (dimensionCount == 3):
+            P = 10**(-4) * np.array([[ 3689, 1170, 2673 ],
+                                     [ 4699, 4387, 7470 ],
+                                     [ 1091, 8732, 5547 ],
+                                     [  381, 5743, 8828 ]])
+        elif (dimensionCount == 6):
+            P = 10**(-4) * np.array([[ 1312, 1696, 5569, 124,  8283, 5886 ],
+                                     [ 2329, 4135, 8307, 3736, 1004, 9991 ],
+                                     [ 2348, 1451, 3522, 2883, 3047, 6650 ],
+                                     [ 4047, 8828, 8732, 5743, 1091, 381  ]])
+        else:
+            print("No default P values for {} dimensions.".format(dimensionCount))
+            return None
+
+    # Start the outer sum at zero
+    outer_sum = 0
+
+    # Perform the outer sum
+    for i in range(4):
+        # Start the inner sum at zero
+        inner_sum = 0
+
+        # Perform the inner sum
+        for j in range(dimensionCount):
+            inner_sum += A[i][j] * np.square(xs[j] - P[i][j])
+
+        outer_sum += alpha[i] * np.exp(-inner_sum)
+
+    return -outer_sum
