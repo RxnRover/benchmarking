@@ -16,7 +16,6 @@ on:
 
 jobs:
   test:
-    needs: prepare
     strategy:
       matrix:
         python:
