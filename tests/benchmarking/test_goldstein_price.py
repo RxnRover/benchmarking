@@ -9,5 +9,5 @@ class TestGoldsteinPrice(unittest.TestCase):
 
         x = [0, -1]
 
-        self.assertAlmostEqual(goldstein_price.goldstein_price(x[0], x[1]),
+        self.assertAlmostEqual(goldstein_price.goldstein_price(x),
                                goldstein_price.goldstein_price_min(), 6)

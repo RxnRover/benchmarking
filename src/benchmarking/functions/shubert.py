@@ -1,6 +1,8 @@
+from typing import List
+
 import numpy as np
 
-def shubert(x_1: float, x_2: float) -> float:
+def shubert(xs: List[float]) -> float:
     """Shubert optimization test function.
 
     Shubert function from https://www.sfu.ca/~ssurjano/shubert.html.
@@ -9,10 +11,8 @@ def shubert(x_1: float, x_2: float) -> float:
     f(x) = \big(\sum_{i=5}^5 i cos((i + 1)x_1 + i)\big) \times 
            \big(\sum_{i=5}^5 i cos((i + 1)x_2 + i)\big)
 
-    :param x_1: First parameter, 'x_1'
-    :type x_1: float
-    :param x_2: Second parameter, 'x_2'
-    :type x_2: float
+    :param xs: Parameter list
+    :type xs: List[float]
 
     :return: Result of calculation
     :rtype: float
@@ -22,8 +22,8 @@ def shubert(x_1: float, x_2: float) -> float:
     term_2 = 0
 
     for i in range(1, 6):
-        term_1 += i * np.cos((i + 1) * x_1 + i)
-        term_2 += i * np.cos((i + 1) * x_2 + i)
+        term_1 += i * np.cos((i + 1) * xs[0] + i)
+        term_2 += i * np.cos((i + 1) * xs[1] + i)
 
     return term_1 * term_2
 
