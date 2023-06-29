@@ -18,10 +18,10 @@ def styblinski_tang(xs: List[float]) -> float:
     :rtype: float
     """
 
-    result = 0
+    result = 0.0
 
     for x in xs:
-        result += x**4 - 16 * x**2 + 5 * x
+        result += x**4 - 16.0 * x**2 + 5.0 * x
 
     result *= 0.5
 
@@ -31,7 +31,8 @@ def styblinski_tang(xs: List[float]) -> float:
 def styblinski_tang_min(dim: int = 2) -> float:
     """Global minimum for the Styblinski-Tang function.
 
-    The global minimum is f(x*) = -39.16599 * d.
+    The global minimum is f(x*) = -39.16599 * d, for
+    x* = (-2.903534, ... , -2.903534).
 
     :param dim: Number of dimensions, as the minimum value is dependent on this
                 value. Defaults to 2 dimensions.

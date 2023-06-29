@@ -5,37 +5,41 @@ from benchmarking.functions import styblinski_tang
 
 class TestStyblinskiTang(unittest.TestCase):
     def test_2d(self):
-        x = [0, 0]
+        dim = 2
+        x = [-2.903534] * dim
 
         self.assertAlmostEqual(
             styblinski_tang.styblinski_tang(x),
-            styblinski_tang.styblinski_tang_min(),
+            styblinski_tang.styblinski_tang_min(dim),
             6,
         )
 
     def test_3d(self):
-        x = [0, 0, 0]
+        dim = 3
+        x = [-2.903534] * dim
 
         self.assertAlmostEqual(
             styblinski_tang.styblinski_tang(x),
-            styblinski_tang.styblinski_tang_min(),
+            styblinski_tang.styblinski_tang_min(dim),
             6,
         )
 
     def test_4d(self):
-        x = [0, 0, 0, 0]
+        dim = 4
+        x = [-2.903534] * dim
 
         self.assertAlmostEqual(
             styblinski_tang.styblinski_tang(x),
-            styblinski_tang.styblinski_tang_min(),
+            styblinski_tang.styblinski_tang_min(dim),
             6,
         )
 
     def test_5d(self):
-        x = [0, 0, 0, 0, 0]
+        dim = 5
+        x = [-2.903534] * dim
 
         self.assertAlmostEqual(
             styblinski_tang.styblinski_tang(x),
-            styblinski_tang.styblinski_tang_min(),
+            styblinski_tang.styblinski_tang_min(dim),
             6,
         )
