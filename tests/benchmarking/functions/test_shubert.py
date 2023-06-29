@@ -1,29 +1,26 @@
 import unittest
+
 import numpy as np
 
 from benchmarking.functions import shubert
 
 
 class TestShubert(unittest.TestCase):
-
     def test_single_min(self):
-
         # This minimum point was found through manual optimization
         x = [-1.4251, -0.8004]
-        
+
         # First point
-        self.assertAlmostEqual(shubert.shubert(x),
-                               shubert.shubert_min(), 4)
+        self.assertAlmostEqual(shubert.shubert(x), shubert.shubert_min(), 4)
 
         # Second, nearby point by swapping the inputs
-        self.assertAlmostEqual(shubert.shubert(x),
-                               shubert.shubert_min(), 4)
+        self.assertAlmostEqual(shubert.shubert(x), shubert.shubert_min(), 4)
 
     def test_multiple_mins(self):
         """The Shubert function has a period of 2 * pi. This can be used
         to test multiple minima and make sure the period is correct in the
         implementation.
-        """ 
+        """
 
         # Shubert function has a period of 2 * pi
         period = 2 * np.pi
@@ -47,9 +44,10 @@ class TestShubert(unittest.TestCase):
             for j in range(grid_length):
                 x_j += period
 
-                self.assertAlmostEqual(shubert.shubert([x_i, x_j]),
-                                       shubert.shubert_min(), 4)
+                self.assertAlmostEqual(
+                    shubert.shubert([x_i, x_j]), shubert.shubert_min(), 4
+                )
 
-                self.assertAlmostEqual(shubert.shubert([x_j, x_i]),
-                                       shubert.shubert_min(), 4)
-
+                self.assertAlmostEqual(
+                    shubert.shubert([x_j, x_i]), shubert.shubert_min(), 4
+                )

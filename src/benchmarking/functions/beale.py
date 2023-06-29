@@ -1,0 +1,36 @@
+from typing import List
+
+
+def beale(xs: List[float]) -> float:
+    """Beale optimization test function.
+
+    Beale function from https://www.sfu.ca/~ssurjano/beale.html.
+
+    Function in LaTeX format:
+    f(x) = (1.5 - x_1 + x_1 x_2)^2 + (2.25 - x_1 + x_1 x_2^2)^2 +
+           (2.625 - x_1 + x_1 x_2^3)^2
+
+    :param xs: Parameter list
+    :type xs: List[float]
+
+    :return: Result of calculation
+    :rtype: float
+    """
+
+    term_1 = (1.5 - xs[0] + xs[0] * xs[1]) ** 2
+    term_2 = (2.25 - xs[0] + xs[0] * xs[1] ** 2) ** 2
+    term_3 = (2.625 - xs[0] + xs[0] * xs[1] ** 3) ** 2
+
+    return term_1 + term_2 + term_3
+
+
+def beale_min() -> float:
+    """Global minimum for the Beale function.
+
+    The global minimum is f(3, 0.5) = 0.
+
+    :return: Global minimum value.
+    :rtype: float
+    """
+
+    return 0
