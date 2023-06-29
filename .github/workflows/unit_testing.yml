@@ -13,31 +13,6 @@ on:
   #   # (useful to check if updates on dependencies break the package)
   #   - cron: '0 0 1,16 * *'
 
-
 jobs:
-  test:
-    strategy:
-      matrix:
-        python:
-        - "3.7"  # oldest Python supported by PSF
-        - "3.10"  # newest Python that is stable
-        platform:
-        - ubuntu-latest
-        # - macos-latest
-        - windows-latest
-    runs-on: ${{ matrix.platform }}
-    steps:
-      - uses: actions/checkout@v3
-
-      - uses: actions/setup-python@v4
-        with:
-          python-version: ${{ matrix.python }}
-      
-      - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
-          pip install -r tests/requirements.txt
-
-      - name: Run tests
-        run: |
-          pytest
+  unit_testing:
+    uses: RxnRover/.github/.github/workflows/python_unit_testing_tox_main.yml@main
