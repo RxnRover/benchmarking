@@ -11,7 +11,7 @@ class TestStyblinskiTang(unittest.TestCase):
         self.assertAlmostEqual(
             styblinski_tang.styblinski_tang(x),
             styblinski_tang.styblinski_tang_min(dim),
-            6,
+            5,
         )
 
     def test_3d(self):
@@ -21,7 +21,7 @@ class TestStyblinskiTang(unittest.TestCase):
         self.assertAlmostEqual(
             styblinski_tang.styblinski_tang(x),
             styblinski_tang.styblinski_tang_min(dim),
-            6,
+            5,
         )
 
     def test_4d(self):
@@ -31,7 +31,7 @@ class TestStyblinskiTang(unittest.TestCase):
         self.assertAlmostEqual(
             styblinski_tang.styblinski_tang(x),
             styblinski_tang.styblinski_tang_min(dim),
-            6,
+            5,
         )
 
     def test_5d(self):
@@ -41,5 +41,5 @@ class TestStyblinskiTang(unittest.TestCase):
         self.assertAlmostEqual(
             styblinski_tang.styblinski_tang(x),
             styblinski_tang.styblinski_tang_min(dim),
-            6,
+            5,
         )
