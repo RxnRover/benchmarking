@@ -6,6 +6,8 @@ def beale(xs: List[float]) -> float:
 
     Beale function from https://www.sfu.ca/~ssurjano/beale.html.
 
+    Input domain: 2D square x_i = [-4.5, 4.5] for all i = 1, 2.
+
     Function in LaTeX format:
     f(x) = (1.5 - x_1 + x_1 x_2)^2 + (2.25 - x_1 + x_1 x_2^2)^2 +
            (2.625 - x_1 + x_1 x_2^3)^2
