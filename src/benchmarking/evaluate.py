@@ -18,7 +18,7 @@ from benchmarking.functions.styblinski_tang import styblinski_tang
 from benchmarking.functions.three_hump_camel import three_hump_camel
 
 
-def evaluate(function_name: str, *args, **kwargs):
+def evaluate(function_name: str, *args, **kwargs):  # pragma: no cover
     """Helper function to evaluate different benchmarking functions given
     the function name. This helps to not have to put this large if-elif
     statement everywhere that multiple functions are possible.
