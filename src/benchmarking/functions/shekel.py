@@ -2,16 +2,47 @@ from typing import List
 
 import numpy as np
 
+from benchmarking.functions.BenchmarkingFunction import BenchmarkingFunction
+
+
+class Shekel(BenchmarkingFunction):
+    def __init__(self, m: int = 5):
+        super().__init__()
+
+        self.set_function(shekel)
+
+        if m == 5:
+            self.add_minimum([4, 4, 4, 4], -10.1532)
+        elif m == 7:
+            self.add_minimum([4, 4, 4, 4], -10.4029)
+        elif m == 10:
+            self.add_minimum([4, 4, 4, 4], -10.5364)
+        else:
+            raise ValueError(
+                "Unsupported value for 'm'. Supported values: 5, 7, 10"
+            )
+
+        self.m = m
+
+        for i in range(4):
+            self.add_bound([0, 10])
+
+    def __call__(self, xs: List[float]) -> float:
+        return self._function(xs, m=self.m)
+
 
 def shekel(
     xs: List[float],
     m: int = 10,
     C: np.ndarray = np.array(
-        [[4.0, 1.0, 8.0, 6.0, 3.0, 2.0, 5.0, 8.0, 6.0, 7.0],
-         [4.0, 1.0, 8.0, 6.0, 7.0, 9.0, 3.0, 1.0, 2.0, 3.6],
-         [4.0, 1.0, 8.0, 6.0, 3.0, 2.0, 5.0, 8.0, 6.0, 7.0],
-         [4.0, 1.0, 8.0, 6.0, 7.0, 9.0, 3.0, 1.0, 2.0, 3.6]]),
-    beta: List[float] = [0.1, 0.2, 0.2, 0.4, 0.4, 0.6, 0.3, 0.7, 0.5, 0.5]
+        [
+            [4.0, 1.0, 8.0, 6.0, 3.0, 2.0, 5.0, 8.0, 6.0, 7.0],
+            [4.0, 1.0, 8.0, 6.0, 7.0, 9.0, 3.0, 1.0, 2.0, 3.6],
+            [4.0, 1.0, 8.0, 6.0, 3.0, 2.0, 5.0, 8.0, 6.0, 7.0],
+            [4.0, 1.0, 8.0, 6.0, 7.0, 9.0, 3.0, 1.0, 2.0, 3.6],
+        ]
+    ),
+    beta: List[float] = [0.1, 0.2, 0.2, 0.4, 0.4, 0.6, 0.3, 0.7, 0.5, 0.5],
 ) -> float:
     """Sheckel 4D optimization test function.
 
@@ -26,9 +57,14 @@ def shekel(
     :type xs: List[float]
     :param m: 'm' parameter, defaults to 10
     :type m: int, optional
-    :param C: 'C' array, defaults to np.array( [[4.0, 1.0, 8.0, 6.0, 3.0, 2.0, 5.0, 8.0, 6.0, 7.0], [4.0, 1.0, 8.0, 6.0, 7.0, 9.0, 3.0, 1.0, 2.0, 3.6], [4.0, 1.0, 8.0, 6.0, 3.0, 2.0, 5.0, 8.0, 6.0, 7.0], [4.0, 1.0, 8.0, 6.0, 7.0, 9.0, 3.0, 1.0, 2.0, 3.6]])
+    :param C: 'C' array, defaults to
+              np.array( [[4.0, 1.0, 8.0, 6.0, 3.0, 2.0, 5.0, 8.0, 6.0, 7.0],
+                         [4.0, 1.0, 8.0, 6.0, 7.0, 9.0, 3.0, 1.0, 2.0, 3.6],
+                         [4.0, 1.0, 8.0, 6.0, 3.0, 2.0, 5.0, 8.0, 6.0, 7.0],
+                         [4.0, 1.0, 8.0, 6.0, 7.0, 9.0, 3.0, 1.0, 2.0, 3.6]])
     :type C: np.ndarray, optional
-    :param beta: 'beta' list, defaults to [ 0.1, 0.2, 0.2, 0.4, 0.4, 0.6, 0.3, 0.7, 0.5, 0.5 ]
+    :param beta: 'beta' list, defaults to
+                 [ 0.1, 0.2, 0.2, 0.4, 0.4, 0.6, 0.3, 0.7, 0.5, 0.5 ]
     :type beta: List[float], optional
     :return: Result of calculation
     :rtype: float
@@ -40,7 +76,7 @@ def shekel(
         inner_sum = 0
 
         for j in range(4):
-            inner_sum += (xs[j] - C[j][i])**2
+            inner_sum += (xs[j] - C[j][i]) ** 2
 
         outer_sum += 1 / (inner_sum + beta[i])
 
@@ -64,11 +100,11 @@ def shekel_min(m: int = 10) -> float:
     :rtype: float
     """
 
-    if (m == 5):
+    if m == 5:
         return -10.1532
-    elif (m == 7):
+    elif m == 7:
         return -10.4029
-    elif (m == 10):
+    elif m == 10:
         return -10.5364
     else:
         raise ValueError("Invalid 'm' value.")

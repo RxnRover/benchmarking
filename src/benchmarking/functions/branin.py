@@ -2,14 +2,32 @@ from typing import List
 
 import numpy as np
 
+from benchmarking.functions.BenchmarkingFunction import BenchmarkingFunction
 
-def branin(xs: List[float],
-           a: float = 1,
-           b: float = 5.1 / (4 * np.pi**2),
-           c: float = 5 / np.pi,
-           r: float = 6,
-           s: float = 10,
-           t: float = 1 / (8 * np.pi)) -> float:
+
+class Branin(BenchmarkingFunction):
+    def __init__(self):
+        super().__init__()
+
+        self.set_function(branin)
+
+        self.add_minimum([-np.pi, 12.275], 0.397887)
+        self.add_minimum([np.pi, 2.275], 0.397887)
+        self.add_minimum([9.42478, 2.475], 0.397887)
+
+        self.add_bound([-5, 10])
+        self.add_bound([0, 15])
+
+
+def branin(
+    xs: List[float],
+    a: float = 1,
+    b: float = 5.1 / (4 * np.pi**2),
+    c: float = 5 / np.pi,
+    r: float = 6,
+    s: float = 10,
+    t: float = 1 / (8 * np.pi),
+) -> float:
     """Branin, or Branin-Hoo, optimization test function.
 
     Branin function with (by default) values of a, b, c, r, s, t:
@@ -33,25 +51,12 @@ def branin(xs: List[float],
     :type s: float, optional
     :param t: 't' parameter, defaults to 1/(8 * np.pi)
     :type t: float, optional
-    
+
     :return: Result of calculation.
     :rtype: float
     """
 
-    term_1 = a * (xs[1] - b * xs[0]**2 + c * xs[0] - r)**2
+    term_1 = a * (xs[1] - b * xs[0] ** 2 + c * xs[0] - r) ** 2
     term_2 = s * (1 - t) * np.cos(xs[0])
 
     return term_1 + term_2 + s
-
-
-def branin_min() -> float:
-    """Branin function global minimum value.
-
-    Global minimum of 0.397887 is found at (-pi, 12.275), (pi, 2.275) and
-    (9.42478, 2.475).
-
-    :return: Global minimum.
-    :rtype: float
-    """
-
-    return 0.397887
