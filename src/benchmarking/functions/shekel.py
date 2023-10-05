@@ -44,9 +44,9 @@ def shekel(
     ),
     beta: List[float] = [0.1, 0.2, 0.2, 0.4, 0.4, 0.6, 0.3, 0.7, 0.5, 0.5],
 ) -> float:
-    """Sheckel 4D optimization test function.
+    """Shekel 4D optimization test function.
 
-    Sheckel 4D function with (by default) values of \beta and C
+    Shekel 4D function with (by default) values of \beta and C
     from https://www.sfu.ca/~ssurjano/shekel.html. Does not support
     m > 10 without a new C provided.
 
