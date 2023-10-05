@@ -49,15 +49,3 @@ def shubert(xs: List[float]) -> float:
         term_2 += i * np.cos((i + 1) * xs[1] + i)
 
     return term_1 * term_2
-
-
-def shubert_min() -> float:
-    """Global minimum for the Shubert function.
-
-    Global minimum is -186.7309 at ???.
-
-    :return: Global minimum.
-    :rtype: float
-    """
-
-    return -186.7309

@@ -27,3 +27,6 @@ class TestShekel(unittest.TestCase):
         foo = shekel.Shekel(m=m)
 
         self.assertAlmostEqual(foo(xs), foo.global_minima[0].value, 3)
+
+    def test_invalid_m(self):
+        self.assertRaises(ValueError, shekel.Shekel, -2)
