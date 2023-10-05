@@ -10,18 +10,18 @@ class TestBranin(unittest.TestCase):
 
         foo = branin.Branin()
 
-        self.assertAlmostEqual(foo(xs), foo.minima[0].value, 6)
+        self.assertAlmostEqual(foo(xs), foo.global_minima[0].value, 6)
 
     def test_min_2(self):
         xs = [pi, 2.275]
 
         foo = branin.Branin()
 
-        self.assertAlmostEqual(foo(xs), foo.minima[1].value, 6)
+        self.assertAlmostEqual(foo(xs), foo.global_minima[1].value, 6)
 
     def test_min_3(self):
         xs = [9.42478, 2.475]
 
         foo = branin.Branin()
 
-        self.assertAlmostEqual(foo(xs), foo.minima[2].value, 6)
+        self.assertAlmostEqual(foo(xs), foo.global_minima[2].value, 6)

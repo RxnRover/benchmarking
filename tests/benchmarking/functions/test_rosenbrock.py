@@ -14,4 +14,4 @@ class TestRosenbrock(unittest.TestCase):
 
             foo = rosenbrock.Rosenbrock(dim=dim)
 
-            self.assertAlmostEqual(foo(xs), foo.minima[0].value, 6)
+            self.assertAlmostEqual(foo(xs), foo.global_minima[0].value, 6)

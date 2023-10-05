@@ -1,5 +1,19 @@
 from typing import List
 
+from benchmarking.functions.BenchmarkingFunction import BenchmarkingFunction
+
+
+class ThreeHumpCamel(BenchmarkingFunction):
+    def __init__(self):
+        super().__init__()
+
+        self.set_function(three_hump_camel)
+
+        self.add_minimum([0.0, 0.0], 0.0)
+
+        for _ in range(2):
+            self.add_bound([-5, 5])
+
 
 def three_hump_camel(xs: List[float]) -> float:
     """Three-hump camel optimization test function.

@@ -5,6 +5,8 @@ from benchmarking.functions import matyas
 
 class TestMatyas(unittest.TestCase):
     def test_min(self):
-        x = [0, 0]
+        xs = [0, 0]
 
-        self.assertAlmostEqual(matyas.matyas(x), matyas.matyas_min(), 6)
+        foo = matyas.Matyas()
+
+        self.assertAlmostEqual(foo(xs), foo.global_minima[0].value, 6)

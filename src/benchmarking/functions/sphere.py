@@ -1,5 +1,19 @@
 from typing import List
 
+from benchmarking.functions.BenchmarkingFunction import BenchmarkingFunction
+
+
+class Sphere(BenchmarkingFunction):
+    def __init__(self, dim: int = 4):
+        super().__init__()
+
+        self.set_function(sphere)
+
+        self.add_minimum([0.0] * dim, 0.0)
+
+        for _ in range(dim):
+            self.add_bound([-10, 10])
+
 
 def sphere(xs: List[float]) -> float:
     """Sphere optimization test function.

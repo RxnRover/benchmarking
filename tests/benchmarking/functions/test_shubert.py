@@ -12,7 +12,7 @@ class TestShubert(unittest.TestCase):
 
         foo = shubert.Shubert()
 
-        self.assertAlmostEqual(foo(xs), foo.minima[0].value, 4)
+        self.assertAlmostEqual(foo(xs), foo.global_minima[0].value, 4)
 
     def test_multiple_mins(self):
         """The Shubert function has a period of 2 * pi. This can be used
@@ -44,6 +44,10 @@ class TestShubert(unittest.TestCase):
             for j in range(grid_length):
                 x_j += period
 
-                self.assertAlmostEqual(foo([x_i, x_j]), foo.minima[0].value, 4)
+                self.assertAlmostEqual(
+                    foo([x_i, x_j]), foo.global_minima[0].value, 4
+                )
 
-                self.assertAlmostEqual(foo([x_j, x_i]), foo.minima[0].value, 4)
+                self.assertAlmostEqual(
+                    foo([x_j, x_i]), foo.global_minima[0].value, 4
+                )

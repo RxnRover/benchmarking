@@ -1,6 +1,20 @@
 import math
 from typing import List
 
+from benchmarking.functions.BenchmarkingFunction import BenchmarkingFunction
+
+
+class Eggholder(BenchmarkingFunction):
+    def __init__(self):
+        super().__init__()
+
+        self.set_function(eggholder)
+
+        self.add_minimum([512, 404.2319], -959.6407)
+
+        for _ in range(2):
+            self.add_bound([-512, 512])
+
 
 def eggholder(xs: List[float]) -> float:
     """Eggholder function optimization test function.

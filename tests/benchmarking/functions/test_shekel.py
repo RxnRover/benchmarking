@@ -10,7 +10,7 @@ class TestShekel(unittest.TestCase):
 
         foo = shekel.Shekel(m=m)
 
-        self.assertAlmostEqual(foo(xs), foo.minima[0].value, 3)
+        self.assertAlmostEqual(foo(xs), foo.global_minima[0].value, 3)
 
     def test_m7(self):
         xs = [4, 4, 4, 4]
@@ -18,7 +18,7 @@ class TestShekel(unittest.TestCase):
 
         foo = shekel.Shekel(m=m)
 
-        self.assertAlmostEqual(foo(xs), foo.minima[0].value, 3)
+        self.assertAlmostEqual(foo(xs), foo.global_minima[0].value, 3)
 
     def test_m10(self):
         xs = [4, 4, 4, 4]
@@ -26,4 +26,4 @@ class TestShekel(unittest.TestCase):
 
         foo = shekel.Shekel(m=m)
 
-        self.assertAlmostEqual(foo(xs), foo.minima[0].value, 3)
+        self.assertAlmostEqual(foo(xs), foo.global_minima[0].value, 3)

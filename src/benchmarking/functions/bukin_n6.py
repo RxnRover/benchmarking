@@ -1,6 +1,20 @@
 import math
 from typing import List
 
+from benchmarking.functions.BenchmarkingFunction import BenchmarkingFunction
+
+
+class BukinN6(BenchmarkingFunction):
+    def __init__(self):
+        super().__init__()
+
+        self.set_function(bukin_n6)
+
+        self.add_minimum([-10, 1], 0)
+
+        self.add_bound([-15, -5])
+        self.add_bound([-3, 3])
+
 
 def bukin_n6(xs: List[float]) -> float:
     """Sixth Bukin function optimization test function.

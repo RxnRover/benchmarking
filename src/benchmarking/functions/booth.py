@@ -1,5 +1,19 @@
 from typing import List
 
+from benchmarking.functions.BenchmarkingFunction import BenchmarkingFunction
+
+
+class Booth(BenchmarkingFunction):
+    def __init__(self):
+        super().__init__()
+
+        self.set_function(booth)
+
+        self.add_minimum([1, 3], 0.0)
+
+        for _ in range(2):
+            self.add_bound([-10, 10])
+
 
 def booth(xs: List[float]) -> float:
     """Booth optimization test function.

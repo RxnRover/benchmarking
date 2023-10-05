@@ -9,11 +9,11 @@ class TestSixHumpCamel(unittest.TestCase):
 
         foo = six_hump_camel.SixHumpCamel()
 
-        self.assertAlmostEqual(foo(xs), foo.minima[0].value, 4)
+        self.assertAlmostEqual(foo(xs), foo.global_minima[0].value, 4)
 
     def test_min_2(self):
         xs = [-0.0898, 0.7126]
 
         foo = six_hump_camel.SixHumpCamel()
 
-        self.assertAlmostEqual(foo(xs), foo.minima[0].value, 4)
+        self.assertAlmostEqual(foo(xs), foo.global_minima[0].value, 4)

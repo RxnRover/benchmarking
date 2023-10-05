@@ -9,11 +9,11 @@ class TestHartmann(unittest.TestCase):
 
         foo = hartmann.Hartmann3D()
 
-        self.assertAlmostEqual(foo(xs), foo.minima[0].value, 5)
+        self.assertAlmostEqual(foo(xs), foo.global_minima[0].value, 5)
 
     def test_6d(self):
         xs = [0.20169, 0.150011, 0.476874, 0.275332, 0.311652, 0.6573]
 
         foo = hartmann.Hartmann6D()
 
-        self.assertAlmostEqual(foo(xs), foo.minima[0].value, 5)
+        self.assertAlmostEqual(foo(xs), foo.global_minima[0].value, 5)

@@ -1,5 +1,19 @@
 from typing import List
 
+from benchmarking.functions.BenchmarkingFunction import BenchmarkingFunction
+
+
+class Matyas(BenchmarkingFunction):
+    def __init__(self):
+        super().__init__()
+
+        self.set_function(matyas)
+
+        self.add_minimum([0.0, 0.0], 0.0)
+
+        for _ in range(2):
+            self.add_bound([-10, 10])
+
 
 def matyas(xs: List[float]) -> float:
     """Matyas optimization test function.

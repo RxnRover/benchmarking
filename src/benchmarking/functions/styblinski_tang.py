@@ -1,5 +1,19 @@
 from typing import List
 
+from benchmarking.functions.BenchmarkingFunction import BenchmarkingFunction
+
+
+class StyblinskiTang(BenchmarkingFunction):
+    def __init__(self, dim: int = 4):
+        super().__init__()
+
+        self.set_function(styblinski_tang)
+
+        self.add_minimum([-2.903634] * dim, -39.16599 * dim)
+
+        for _ in range(dim):
+            self.add_bound([-5, 5])
+
 
 def styblinski_tang(xs: List[float]) -> float:
     """Styblinski-Tang optimization test function.

@@ -1,6 +1,23 @@
 import math
 from typing import List
 
+from benchmarking.functions.BenchmarkingFunction import BenchmarkingFunction
+
+
+class HolderTable(BenchmarkingFunction):
+    def __init__(self):
+        super().__init__()
+
+        self.set_function(holder_table)
+
+        self.add_minimum([8.05502, 9.66459], -19.2085)
+        self.add_minimum([8.05502, -9.66459], -19.2085)
+        self.add_minimum([-8.05502, 9.66459], -19.2085)
+        self.add_minimum([-8.05502, -9.66459], -19.2085)
+
+        for _ in range(2):
+            self.add_bound([-10, 10])
+
 
 def holder_table(xs: List[float]) -> float:
     """Holder Table function optimization test function.
