@@ -9,6 +9,7 @@ class Sphere(BenchmarkingFunction):
 
         self.set_function(sphere)
 
+        # The global minimum is f(x*) = 0, at x* = (0, ..., 0).
         self.add_minimum([0.0] * dim, 0.0)
 
         for _ in range(dim):
@@ -38,15 +39,3 @@ def sphere(xs: List[float]) -> float:
         result += x**2
 
     return result
-
-
-def sphere_min() -> float:
-    """Global minimum for the Sphere function.
-
-    The global minimum is f(x*) = 0, at x* = (0, ..., 0).
-
-    :return: Global minimum value.
-    :rtype: float
-    """
-
-    return 0

@@ -18,6 +18,7 @@ class Hartmann3D(BenchmarkingFunction):
 
         self.set_function(hartmann)
 
+        # The global minimum is -3.86278 at (0.114614, 0.555649, 0.852547).
         self.add_minimum([0.114614, 0.555649, 0.852547], -3.86278)
 
         for i in range(3):
@@ -56,6 +57,8 @@ class Hartmann6D(BenchmarkingFunction):
 
         self.set_function(hartmann)
 
+        # The global minimum is -3.32237 at
+        # (0.20169, 0.150011, 0.476874, 0.275332, 0.311652, 0.6573).
         self.add_minimum(
             [0.20169, 0.150011, 0.476874, 0.275332, 0.311652, 0.6573], -3.32237
         )
@@ -189,30 +192,3 @@ def hartmann(
         outer_sum += alpha[i] * np.exp(-inner_sum)
 
     return -outer_sum
-
-
-def hartmann_min(dimensions: int = 3) -> float:
-    """Hartmann function global minimum. This function supports 3 or 6
-    dimensions.
-
-    In 3 dimensions, the global minimum is -3.86278 at
-    (0.114614, 0.555649, 0.852547).
-
-    In 6 dimensions, the global minimum is -3.32237 at
-    (0.20169, 0.150011, 0.476874, 0.275332, 0.311652, 0.6573).
-
-    :param dimensions: Number of dimensions, defaults to 3
-    :type dimensions: int, optional
-
-    :raises ValueError: Invalid number of dimensions.
-
-    :return: Global minimum.
-    :rtype: float
-    """
-
-    if dimensions == 3:
-        return -3.86278
-    elif dimensions == 6:
-        return -3.32237
-    else:
-        raise ValueError("Invalid dimension count.")

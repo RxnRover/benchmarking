@@ -9,6 +9,7 @@ class GoldsteinPrice(BenchmarkingFunction):
 
         self.set_function(goldstein_price)
 
+        # The global minimum is f(0, -1) = 3.
         self.add_minimum([0, -1], 3.0)
 
         self.add_bound([-2, 2])

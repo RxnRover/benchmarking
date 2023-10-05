@@ -9,6 +9,7 @@ class Rosenbrock(BenchmarkingFunction):
 
         self.set_function(rosenbrock)
 
+        # The global minimum is 0 at (1, ..., 1).
         self.add_minimum([1] * dim, 0)
 
         for i in range(dim):
@@ -39,15 +40,3 @@ def rosenbrock(xs: List[float]) -> float:
         sum += term_1 + term_2
 
     return sum
-
-
-def rosenbrock_min() -> float:
-    """Rosenbrock global minimum in n-dimensions.
-
-    The global minimum is 0 when all inputs are 1.
-
-    :return: Global minimum.
-    :rtype: float
-    """
-
-    return 0

@@ -9,6 +9,7 @@ class Booth(BenchmarkingFunction):
 
         self.set_function(booth)
 
+        # The global minimum is f(1, 3) = 0.
         self.add_minimum([1, 3], 0.0)
 
         for _ in range(2):
@@ -36,15 +37,3 @@ def booth(xs: List[float]) -> float:
     term_2 = (2 * xs[0] + xs[1] - 5) ** 2
 
     return term_1 + term_2
-
-
-def booth_min() -> float:
-    """Global minimum for the Booth function.
-
-    The global minimum is f(1, 3) = 0.
-
-    :return: Global minimum value.
-    :rtype: float
-    """
-
-    return 0

@@ -16,6 +16,7 @@ class Shubert(BenchmarkingFunction):
 
         self.set_function(shubert)
 
+        # Global minimum is -186.7309 at ???.
         # This minimum point was found through manual optimization and is
         # an approximation
         self.add_minimum([-1.4251, -0.8004], -186.7309)

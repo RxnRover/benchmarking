@@ -9,6 +9,7 @@ class SixHumpCamel(BenchmarkingFunction):
 
         self.set_function(six_hump_camel)
 
+        # Global minimum is -1.0316 at (0.0898, -0.7126) and (-0.0898, 0.7126).
         self.add_minimum([0.0898, -0.7126], -1.0316)
         self.add_minimum([-0.0898, 0.7126], -1.0316)
 
@@ -37,15 +38,3 @@ def six_hump_camel(xs: List[float]) -> float:
     term_3 = (-4 + 4 * xs[1] ** 2) * xs[1] ** 2
 
     return term_1 + term_2 + term_3
-
-
-def six_hump_camel_min() -> float:
-    """Global minimum of the Six-Hump Camel function.
-
-    Global minimum is -1.0316 at (0.0898, -0.7126) and (-0.0898, 0.7126).
-
-    :return: Global minimum
-    :rtype: float
-    """
-
-    return -1.0316

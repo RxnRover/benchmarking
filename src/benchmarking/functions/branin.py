@@ -11,6 +11,8 @@ class Branin(BenchmarkingFunction):
 
         self.set_function(branin)
 
+        # Global minimum of 0.397887 is found at (-pi, 12.275), (pi, 2.275) and
+        # (9.42478, 2.475).
         self.add_minimum([-np.pi, 12.275], 0.397887)
         self.add_minimum([np.pi, 2.275], 0.397887)
         self.add_minimum([9.42478, 2.475], 0.397887)

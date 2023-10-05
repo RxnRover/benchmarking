@@ -10,6 +10,7 @@ class Eggholder(BenchmarkingFunction):
 
         self.set_function(eggholder)
 
+        # The global minimum is f(512, 404.2319) = -959.6407.
         self.add_minimum([512, 404.2319], -959.6407)
 
         for _ in range(2):
@@ -38,15 +39,3 @@ def eggholder(xs: List[float]) -> float:
     term_2 = xs[0] * math.sin(math.sqrt(abs(xs[0] - (xs[1] + 47))))
 
     return term_1 - term_2
-
-
-def eggholder_min() -> float:
-    """Global minimum for the Eggholder function.
-
-    The global minimum is f(512, 404.2319) = -959.6407.
-
-    :return: Global minimum value.
-    :rtype: float
-    """
-
-    return -959.6407

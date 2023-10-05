@@ -10,6 +10,7 @@ class BukinN6(BenchmarkingFunction):
 
         self.set_function(bukin_n6)
 
+        # The global minimum is f(-10, 1) = 0.
         self.add_minimum([-10, 1], 0)
 
         self.add_bound([-15, -5])
@@ -37,15 +38,3 @@ def bukin_n6(xs: List[float]) -> float:
     term_2 = 0.01 * abs(xs[0] + 10)
 
     return term_1 + term_2
-
-
-def bukin_n6_min() -> float:
-    """Global minimum for the Sixth Bukin function.
-
-    The global minimum is f(-10, 1) = 0.
-
-    :return: Global minimum value.
-    :rtype: float
-    """
-
-    return 0

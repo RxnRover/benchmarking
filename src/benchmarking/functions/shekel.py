@@ -11,11 +11,16 @@ class Shekel(BenchmarkingFunction):
 
         self.set_function(shekel)
 
+        # This function only supports 'm' values
+        # of 5, 7, or 10 currently
         if m == 5:
+            # Global minimum for m = 5 is -10.1532 at (4, 4, 4, 4)
             self.add_minimum([4, 4, 4, 4], -10.1532)
         elif m == 7:
+            # Global minimum for m = 7 is -10.4029 at (4, 4, 4, 4)
             self.add_minimum([4, 4, 4, 4], -10.4029)
         elif m == 10:
+            # Global minimum for m = 10 is -10.5364 at (4, 4, 4, 4)
             self.add_minimum([4, 4, 4, 4], -10.5364)
         else:
             raise ValueError(
@@ -81,30 +86,3 @@ def shekel(
         outer_sum += 1 / (inner_sum + beta[i])
 
     return -outer_sum
-
-
-def shekel_min(m: int = 10) -> float:
-    """Shekel function global minimum. This function only supports 'm' values
-    of 5, 7, or 10.
-
-    Global minimum at
-
-    * m = 5 is -10.1532 for (4, 4, 4, 4)
-    * m = 7 is -10.4029 for (4, 4, 4, 4)
-    * m = 10 is -10.5364 for (4, 4, 4, 4)
-
-    :param m: _description_, defaults to 10
-    :type m: int, optional
-    :raises ValueError: _description_
-    :return: _description_
-    :rtype: float
-    """
-
-    if m == 5:
-        return -10.1532
-    elif m == 7:
-        return -10.4029
-    elif m == 10:
-        return -10.5364
-    else:
-        raise ValueError("Invalid 'm' value.")

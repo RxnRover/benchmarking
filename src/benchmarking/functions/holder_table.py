@@ -10,6 +10,11 @@ class HolderTable(BenchmarkingFunction):
 
         self.set_function(holder_table)
 
+        # The global minima are:
+        # - f(8.05502, 9.66459) = -19.2085.
+        # - f(8.05502, -9.66459) = -19.2085.
+        # - f(-8.05502, 9.66459) = -19.2085.
+        # - f(-8.05502, -9.66459) = -19.2085.
         self.add_minimum([8.05502, 9.66459], -19.2085)
         self.add_minimum([8.05502, -9.66459], -19.2085)
         self.add_minimum([-8.05502, 9.66459], -19.2085)
@@ -41,19 +46,3 @@ def holder_table(xs: List[float]) -> float:
     result *= math.exp(abs(1 - math.sqrt(xs[0] ** 2 + xs[1] ** 2) / math.pi))
 
     return -abs(result)
-
-
-def holder_table_min() -> float:
-    """Global minimum for the Holder Table function.
-
-    The global minima are:
-    - f(8.05502, 9.66459) = -19.2085.
-    - f(8.05502, -9.66459) = -19.2085.
-    - f(-8.05502, 9.66459) = -19.2085.
-    - f(-8.05502, -9.66459) = -19.2085.
-
-    :return: Global minimum value.
-    :rtype: float
-    """
-
-    return -19.2085

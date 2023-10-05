@@ -9,6 +9,7 @@ class Beale(BenchmarkingFunction):
 
         self.set_function(beale)
 
+        # The global minimum is f(3, 0.5) = 0.
         self.add_minimum([3, 0.5], 0)
 
         self.add_bound([-4.5, -4.5])
