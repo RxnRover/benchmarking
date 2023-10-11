@@ -45,7 +45,18 @@ class BenchmarkingFunction(ABC):
         if self.nmin == 0:
             return None
 
-        return self.minima[0].value()
+        return self.global_minima[0].value
+
+    @property
+    def max(self):
+        """Get the value of the global maximum. Returns 'None' if there
+        are no maxima listed for the function.
+        """
+
+        if self.nmax == 0:
+            return None
+
+        return self.global_maxima[0].value
 
     @property
     def global_minima(self):
@@ -68,14 +79,24 @@ class BenchmarkingFunction(ABC):
         return self._maxima
 
     @property
+    def global_extrema(self):
+        """List of global extrema."""
+        return self.global_minima + self.global_maxima
+
+    @property
     def extrema(self):
         """List of all extrema."""
-        return self.minima.extend(self.maxima)
+        return self.minima + self.maxima
 
     @property
     def nmin(self):
         """Number of global minima."""
-        return len(self._minima)
+        return len(self.global_minima)
+
+    @property
+    def nmax(self):
+        """Number of global maxima."""
+        return len(self.global_maxima)
 
     @property
     def bounds(self):
