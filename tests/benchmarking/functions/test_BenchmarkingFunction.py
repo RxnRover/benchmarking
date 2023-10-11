@@ -11,6 +11,22 @@ class TestBenchmarkingFunction(unittest.TestCase):
 
         corr_bounds = [-2.0, 1.0]
 
+        corr_metadata = {
+            "all_minima_count": 2,
+            "all_minima_values": [-0.07123, -1.0967],
+            "all_minima_coordinates": [[0.42539], [-1.1754]],
+            "global_minima_count": 1,
+            "global_minima_value": -1.0967,
+            "global_minima_coordinates": [[-1.1754]],
+            "all_maxima_count": 3,
+            "all_maxima_values": [0.0, 1.0, 4.0],
+            "all_maxima_coordinates": [[0.0], [1.0], [-2.0]],
+            "global_maxima_count": 1,
+            "global_maxima_value": 4.0,
+            "global_maxima_coordinates": [[-2.0]],
+            "bounds": [corr_bounds],
+        }
+
         bench = BenchmarkingFunction()
 
         # Set the function to use
@@ -49,11 +65,30 @@ class TestBenchmarkingFunction(unittest.TestCase):
         # Check boundary property
         self.assertEqual(bench.bounds, [corr_bounds])
 
+        self.assertEqual(bench.metadata, corr_metadata)
+
     def test_no_extrema(self):
         bench = BenchmarkingFunction()
+
+        corr_metadata = {
+            "all_minima_count": 0,
+            "all_minima_values": [],
+            "all_minima_coordinates": [],
+            "global_minima_count": 0,
+            "global_minima_value": None,
+            "global_minima_coordinates": [],
+            "all_maxima_count": 0,
+            "all_maxima_values": [],
+            "all_maxima_coordinates": [],
+            "global_maxima_count": 0,
+            "global_maxima_value": None,
+            "global_maxima_coordinates": [],
+            "bounds": [],
+        }
 
         self.assertIs(bench.min, None)
         self.assertIs(bench.max, None)
         self.assertEqual(bench.nmin, 0)
         self.assertEqual(bench.nmax, 0)
         self.assertEqual(len(bench.extrema), 0)
+        self.assertEqual(bench.metadata, corr_metadata)

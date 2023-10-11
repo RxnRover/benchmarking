@@ -102,3 +102,37 @@ class BenchmarkingFunction(ABC):
     def bounds(self):
         """Suggested boundaries to use."""
         return self._bounds
+
+    @property
+    def metadata(self):
+        """Dictionary containing metadata about benchmarking function."""
+
+        metadata = {}
+
+        metadata["all_minima_count"] = len(self.minima)
+        metadata["all_minima_values"] = [f.value for f in self.minima]
+        metadata["all_minima_coordinates"] = [
+            f.coordinates for f in self.minima
+        ]
+
+        metadata["global_minima_count"] = self.nmin
+        metadata["global_minima_value"] = self.min
+        metadata["global_minima_coordinates"] = [
+            f.coordinates for f in self.global_minima
+        ]
+
+        metadata["all_maxima_count"] = len(self.maxima)
+        metadata["all_maxima_values"] = [f.value for f in self.maxima]
+        metadata["all_maxima_coordinates"] = [
+            f.coordinates for f in self.maxima
+        ]
+
+        metadata["global_maxima_count"] = self.nmin
+        metadata["global_maxima_value"] = self.max
+        metadata["global_maxima_coordinates"] = [
+            f.coordinates for f in self.global_maxima
+        ]
+
+        metadata["bounds"] = self.bounds
+
+        return metadata
