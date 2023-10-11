@@ -11,9 +11,7 @@ def generate_box(bounds, numPoints):
 
     box = []
     for bound in bounds:
-        # Generate the range at the given step size.
-        # 0.0001 is added to the upper bound so it is included since
-        # arange excludes the upper bound.
+        # Generate the range at the given step size
         box.append(
             np.linspace(bound[0], bound[1], num=numPoints, endpoint=True)
         )
