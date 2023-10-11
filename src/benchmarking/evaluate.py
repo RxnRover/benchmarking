@@ -1,21 +1,21 @@
-from benchmarking.functions.beale import beale
-from benchmarking.functions.booth import booth
-from benchmarking.functions.branin import branin
-from benchmarking.functions.bukin_n6 import bukin_n6
-from benchmarking.functions.eggholder import eggholder
-from benchmarking.functions.goldstein_price import goldstein_price
-from benchmarking.functions.hartmann import hartmann
-from benchmarking.functions.himmelblau import himmelblau
-from benchmarking.functions.holder_table import holder_table
-from benchmarking.functions.matyas import matyas
-from benchmarking.functions.rosenbrock import rosenbrock
-from benchmarking.functions.schwefel import schwefel
-from benchmarking.functions.shekel import shekel
-from benchmarking.functions.shubert import shubert
-from benchmarking.functions.six_hump_camel import six_hump_camel
-from benchmarking.functions.sphere import sphere
-from benchmarking.functions.styblinski_tang import styblinski_tang
-from benchmarking.functions.three_hump_camel import three_hump_camel
+from benchmarking.functions.beale import Beale
+from benchmarking.functions.booth import Booth
+from benchmarking.functions.branin import Branin
+from benchmarking.functions.bukin_n6 import BukinN6
+from benchmarking.functions.eggholder import Eggholder
+from benchmarking.functions.goldstein_price import GoldsteinPrice
+from benchmarking.functions.hartmann import Hartmann3D, Hartmann6D
+from benchmarking.functions.himmelblau import Himmelblau
+from benchmarking.functions.holder_table import HolderTable
+from benchmarking.functions.matyas import Matyas
+from benchmarking.functions.rosenbrock import Rosenbrock
+from benchmarking.functions.schwefel import Schwefel
+from benchmarking.functions.shekel import Shekel
+from benchmarking.functions.shubert import Shubert
+from benchmarking.functions.six_hump_camel import SixHumpCamel
+from benchmarking.functions.sphere import Sphere
+from benchmarking.functions.styblinski_tang import StyblinskiTang
+from benchmarking.functions.three_hump_camel import ThreeHumpCamel
 
 
 def evaluate(function_name: str, *args, **kwargs):  # pragma: no cover
@@ -35,41 +35,43 @@ def evaluate(function_name: str, *args, **kwargs):  # pragma: no cover
     """
 
     if "beale" in function_name:
-        result = beale(*args, **kwargs)
+        result = Beale()(*args, **kwargs)
     elif "booth" in function_name:
-        result = booth(*args, **kwargs)
+        result = Booth()(*args, **kwargs)
     elif "branin" in function_name:
-        result = branin(*args, **kwargs)
+        result = Branin()(*args, **kwargs)
     elif "bukin_n6" in function_name:
-        result = bukin_n6(*args, **kwargs)
+        result = BukinN6()(*args, **kwargs)
     elif "eggholder" in function_name:
-        result = eggholder(*args, **kwargs)
+        result = Eggholder()(*args, **kwargs)
     elif "goldstein_price" in function_name:
-        result = goldstein_price(*args, **kwargs)
-    elif "hartmann" in function_name:
-        result = hartmann(*args, **kwargs)
+        result = GoldsteinPrice()(*args, **kwargs)
+    elif "hartmann_3d" in function_name:
+        result = Hartmann3D()(*args, **kwargs)
+    elif "hartmann_6d" in function_name:
+        result = Hartmann6D()(*args, **kwargs)
     elif "himmelblau" in function_name:
-        result = himmelblau(*args, **kwargs)
+        result = Himmelblau()(*args, **kwargs)
     elif "holder_table" in function_name:
-        result = holder_table(*args, **kwargs)
+        result = HolderTable()(*args, **kwargs)
     elif "matyas" in function_name:
-        result = matyas(*args, **kwargs)
+        result = Matyas()(*args, **kwargs)
     elif "rosenbrock" in function_name:
-        result = rosenbrock(*args, **kwargs)
+        result = Rosenbrock()(*args, **kwargs)
     elif "schwefel" in function_name:
-        result = schwefel(*args, **kwargs)
+        result = Schwefel()(*args, **kwargs)
     elif "shekel" in function_name:
-        result = shekel(*args, **kwargs)
+        result = Shekel()(*args, **kwargs)
     elif "shubert" in function_name:
-        result = shubert(*args, **kwargs)
+        result = Shubert()(*args, **kwargs)
     elif "six_hump_camel" in function_name:
-        result = six_hump_camel(*args, **kwargs)
+        result = SixHumpCamel()(*args, **kwargs)
     elif "sphere" in function_name:
-        result = sphere(*args, **kwargs)
+        result = Sphere()(*args, **kwargs)
     elif "styblinski_tang" in function_name:
-        result = styblinski_tang(*args, **kwargs)
+        result = StyblinskiTang()(*args, **kwargs)
     elif "three_hump_camel" in function_name:
-        result = three_hump_camel(*args, **kwargs)
+        result = ThreeHumpCamel()(*args, **kwargs)
     else:
         raise ValueError(
             "Invalid function name given: {}.".format(function_name)
