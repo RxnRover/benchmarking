@@ -17,3 +17,10 @@ class TestHartmann(unittest.TestCase):
         foo = hartmann.Hartmann6D()
 
         self.assertAlmostEqual(foo(xs), foo.global_minima[0].value, 5)
+
+    def test_invalid_dimension_count(self):
+        unsupported_dimensions = 101
+
+        self.assertRaises(
+            ValueError, hartmann.hartmann, [0] * unsupported_dimensions
+        )
