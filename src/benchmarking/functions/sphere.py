@@ -1,5 +1,20 @@
 from typing import List
 
+from benchmarking.functions.BenchmarkingFunction import BenchmarkingFunction
+
+
+class Sphere(BenchmarkingFunction):
+    def __init__(self, dim: int = 4):
+        super().__init__()
+
+        self.set_function(sphere)
+
+        # The global minimum is f(x*) = 0, at x* = (0, ..., 0).
+        self.add_minimum([0.0] * dim, 0.0)
+
+        for _ in range(dim):
+            self.add_bound([-10, 10])
+
 
 def sphere(xs: List[float]) -> float:
     """Sphere optimization test function.
@@ -24,15 +39,3 @@ def sphere(xs: List[float]) -> float:
         result += x**2
 
     return result
-
-
-def sphere_min() -> float:
-    """Global minimum for the Sphere function.
-
-    The global minimum is f(x*) = 0, at x* = (0, ..., 0).
-
-    :return: Global minimum value.
-    :rtype: float
-    """
-
-    return 0

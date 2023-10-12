@@ -1,6 +1,21 @@
 import math
 from typing import List
 
+from benchmarking.functions.BenchmarkingFunction import BenchmarkingFunction
+
+
+class Schwefel(BenchmarkingFunction):
+    def __init__(self, dim: int = 4):
+        super().__init__()
+
+        self.set_function(schwefel)
+
+        # The global minimum is f(x*) = 0, at x* = (420.9687, ..., 420.9687).
+        self.add_minimum([420.9687] * dim, 0.0)
+
+        for _ in range(dim):
+            self.add_bound([-500, 500])
+
 
 def schwefel(xs: List[float]) -> float:
     """Schwefel optimization test function.
@@ -26,15 +41,3 @@ def schwefel(xs: List[float]) -> float:
         term_2 += x * math.sin(math.sqrt(abs(x)))
 
     return term_1 - term_2
-
-
-def schwefel_min() -> float:
-    """Global minimum for the Schwefel function.
-
-    The global minimum is f(x*) = 0, at x* = (420.9687, ..., 420.9687).
-
-    :return: Global minimum value.
-    :rtype: float
-    """
-
-    return 0

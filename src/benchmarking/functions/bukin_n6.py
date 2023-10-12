@@ -1,6 +1,21 @@
 import math
 from typing import List
 
+from benchmarking.functions.BenchmarkingFunction import BenchmarkingFunction
+
+
+class BukinN6(BenchmarkingFunction):
+    def __init__(self):
+        super().__init__()
+
+        self.set_function(bukin_n6)
+
+        # The global minimum is f(-10, 1) = 0.
+        self.add_minimum([-10, 1], 0)
+
+        self.add_bound([-15, -5])
+        self.add_bound([-3, 3])
+
 
 def bukin_n6(xs: List[float]) -> float:
     """Sixth Bukin function optimization test function.
@@ -23,15 +38,3 @@ def bukin_n6(xs: List[float]) -> float:
     term_2 = 0.01 * abs(xs[0] + 10)
 
     return term_1 + term_2
-
-
-def bukin_n6_min() -> float:
-    """Global minimum for the Sixth Bukin function.
-
-    The global minimum is f(-10, 1) = 0.
-
-    :return: Global minimum value.
-    :rtype: float
-    """
-
-    return 0

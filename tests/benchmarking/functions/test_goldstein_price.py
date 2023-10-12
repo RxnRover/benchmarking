@@ -5,10 +5,8 @@ from benchmarking.functions import goldstein_price
 
 class TestGoldsteinPrice(unittest.TestCase):
     def test_call(self):
-        x = [0, -1]
+        xs = [0, -1]
 
-        self.assertAlmostEqual(
-            goldstein_price.goldstein_price(x),
-            goldstein_price.goldstein_price_min(),
-            6,
-        )
+        foo = goldstein_price.GoldsteinPrice()
+
+        self.assertAlmostEqual(foo(xs), foo.global_minima[0].value, 6)

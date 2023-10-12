@@ -1,3 +1,5 @@
+from typing import Any, Dict
+
 from benchmarking.functions.beale import Beale
 from benchmarking.functions.booth import Booth
 from benchmarking.functions.branin import Branin
@@ -18,60 +20,57 @@ from benchmarking.functions.styblinski_tang import StyblinskiTang
 from benchmarking.functions.three_hump_camel import ThreeHumpCamel
 
 
-def evaluate(function_name: str, *args, **kwargs):  # pragma: no cover
-    """Helper function to evaluate different benchmarking functions given
-    the function name. This helps to not have to put this large if-elif
-    statement everywhere that multiple functions are possible.
+def function_data(function_name: str) -> Dict[str, Any]:  # pragma: no cover
+    """Helper function to retrieve function metadata based on function name.
 
     :param function_name: Name of the function to use. This must exactly match
                           the actual function name.
     :type function_name: str
-    :param \*args: Positional arguments to be passed to the benchmarking
-                   function.
-    :param \*\*kwargs: Keyword arguments to be passed to the benchmarking
-                       function.
 
     :raises ValueError: Invalid function name was provided.
+
+    :returns:
+    :rtype: Dict[str, Any]
     """
 
     if "beale" in function_name:
-        result = Beale()(*args, **kwargs)
+        result = Beale().metadata
     elif "booth" in function_name:
-        result = Booth()(*args, **kwargs)
+        result = Booth().metadata
     elif "branin" in function_name:
-        result = Branin()(*args, **kwargs)
+        result = Branin().metadata
     elif "bukin_n6" in function_name:
-        result = BukinN6()(*args, **kwargs)
+        result = BukinN6().metadata
     elif "eggholder" in function_name:
-        result = Eggholder()(*args, **kwargs)
+        result = Eggholder().metadata
     elif "goldstein_price" in function_name:
-        result = GoldsteinPrice()(*args, **kwargs)
+        result = GoldsteinPrice().metadata
     elif "hartmann_3d" in function_name:
-        result = Hartmann3D()(*args, **kwargs)
+        result = Hartmann3D().metadata
     elif "hartmann_6d" in function_name:
-        result = Hartmann6D()(*args, **kwargs)
+        result = Hartmann6D().metadata
     elif "himmelblau" in function_name:
-        result = Himmelblau()(*args, **kwargs)
+        result = Himmelblau().metadata
     elif "holder_table" in function_name:
-        result = HolderTable()(*args, **kwargs)
+        result = HolderTable().metadata
     elif "matyas" in function_name:
-        result = Matyas()(*args, **kwargs)
+        result = Matyas().metadata
     elif "rosenbrock" in function_name:
-        result = Rosenbrock()(*args, **kwargs)
+        result = Rosenbrock().metadata
     elif "schwefel" in function_name:
-        result = Schwefel()(*args, **kwargs)
+        result = Schwefel().metadata
     elif "shekel" in function_name:
-        result = Shekel()(*args, **kwargs)
+        result = Shekel().metadata
     elif "shubert" in function_name:
-        result = Shubert()(*args, **kwargs)
+        result = Shubert().metadata
     elif "six_hump_camel" in function_name:
-        result = SixHumpCamel()(*args, **kwargs)
+        result = SixHumpCamel().metadata
     elif "sphere" in function_name:
-        result = Sphere()(*args, **kwargs)
+        result = Sphere().metadata
     elif "styblinski_tang" in function_name:
-        result = StyblinskiTang()(*args, **kwargs)
+        result = StyblinskiTang().metadata
     elif "three_hump_camel" in function_name:
-        result = ThreeHumpCamel()(*args, **kwargs)
+        result = ThreeHumpCamel().metadata
     else:
         raise ValueError(
             "Invalid function name given: {}.".format(function_name)

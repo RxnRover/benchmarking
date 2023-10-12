@@ -1,5 +1,20 @@
 from typing import List
 
+from benchmarking.functions.BenchmarkingFunction import BenchmarkingFunction
+
+
+class Beale(BenchmarkingFunction):
+    def __init__(self):
+        super().__init__()
+
+        self.set_function(beale)
+
+        # The global minimum is f(3, 0.5) = 0.
+        self.add_minimum([3, 0.5], 0)
+
+        self.add_bound([-4.5, -4.5])
+        self.add_bound([-4.5, -4.5])
+
 
 def beale(xs: List[float]) -> float:
     """Beale optimization test function.
@@ -24,15 +39,3 @@ def beale(xs: List[float]) -> float:
     term_3 = (2.625 - xs[0] + xs[0] * xs[1] ** 3) ** 2
 
     return term_1 + term_2 + term_3
-
-
-def beale_min() -> float:
-    """Global minimum for the Beale function.
-
-    The global minimum is f(3, 0.5) = 0.
-
-    :return: Global minimum value.
-    :rtype: float
-    """
-
-    return 0

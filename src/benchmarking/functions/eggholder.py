@@ -1,6 +1,21 @@
 import math
 from typing import List
 
+from benchmarking.functions.BenchmarkingFunction import BenchmarkingFunction
+
+
+class Eggholder(BenchmarkingFunction):
+    def __init__(self):
+        super().__init__()
+
+        self.set_function(eggholder)
+
+        # The global minimum is f(512, 404.2319) = -959.6407.
+        self.add_minimum([512, 404.2319], -959.6407)
+
+        for _ in range(2):
+            self.add_bound([-512, 512])
+
 
 def eggholder(xs: List[float]) -> float:
     """Eggholder function optimization test function.
@@ -24,15 +39,3 @@ def eggholder(xs: List[float]) -> float:
     term_2 = xs[0] * math.sin(math.sqrt(abs(xs[0] - (xs[1] + 47))))
 
     return term_1 - term_2
-
-
-def eggholder_min() -> float:
-    """Global minimum for the Eggholder function.
-
-    The global minimum is f(512, 404.2319) = -959.6407.
-
-    :return: Global minimum value.
-    :rtype: float
-    """
-
-    return -959.6407

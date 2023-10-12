@@ -5,6 +5,8 @@ from benchmarking.functions import beale
 
 class TestBeale(unittest.TestCase):
     def test_min(self):
-        x = [3, 0.5]
+        xs = [3, 0.5]
 
-        self.assertAlmostEqual(beale.beale(x), beale.beale_min(), 6)
+        foo = beale.Beale()
+
+        self.assertAlmostEqual(foo(xs), foo.global_minima[0].value, 6)

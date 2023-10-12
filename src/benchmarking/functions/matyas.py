@@ -1,5 +1,20 @@
 from typing import List
 
+from benchmarking.functions.BenchmarkingFunction import BenchmarkingFunction
+
+
+class Matyas(BenchmarkingFunction):
+    def __init__(self):
+        super().__init__()
+
+        self.set_function(matyas)
+
+        # The global minimum is f(0, 0) = 0.
+        self.add_minimum([0.0, 0.0], 0.0)
+
+        for _ in range(2):
+            self.add_bound([-10, 10])
+
 
 def matyas(xs: List[float]) -> float:
     """Matyas optimization test function.
@@ -22,15 +37,3 @@ def matyas(xs: List[float]) -> float:
     term_2 = 0.48 * xs[0] * xs[1]
 
     return term_1 - term_2
-
-
-def matyas_min() -> float:
-    """Global minimum for the Matyas function.
-
-    The global minimum is f(0, 0) = 0.
-
-    :return: Global minimum value.
-    :rtype: float
-    """
-
-    return 0

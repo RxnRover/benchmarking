@@ -1,5 +1,21 @@
 from typing import List
 
+from benchmarking.functions.BenchmarkingFunction import BenchmarkingFunction
+
+
+class StyblinskiTang(BenchmarkingFunction):
+    def __init__(self, dim: int = 4):
+        super().__init__()
+
+        self.set_function(styblinski_tang)
+
+        # The global minimum is f(x*) = -39.16599 * d, for
+        # x* = (-2.903534, ... , -2.903534).
+        self.add_minimum([-2.903634] * dim, -39.16599 * dim)
+
+        for _ in range(dim):
+            self.add_bound([-5, 5])
+
 
 def styblinski_tang(xs: List[float]) -> float:
     """Styblinski-Tang optimization test function.
@@ -26,20 +42,3 @@ def styblinski_tang(xs: List[float]) -> float:
     result *= 0.5
 
     return result
-
-
-def styblinski_tang_min(dim: int = 2) -> float:
-    """Global minimum for the Styblinski-Tang function.
-
-    The global minimum is f(x*) = -39.16599 * d, for
-    x* = (-2.903534, ... , -2.903534).
-
-    :param dim: Number of dimensions, as the minimum value is dependent on this
-                value. Defaults to 2 dimensions.
-    :type dim: int, optional
-
-    :return: Global minimum value.
-    :rtype: float
-    """
-
-    return -39.16599 * dim
