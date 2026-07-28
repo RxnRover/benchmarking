@@ -1,6 +1,6 @@
 [flake8]
 # Global ignores
-ignore = 
+ignore =
     # trailing whitespace
     W291,
     # line break before binary operator
@@ -9,7 +9,7 @@ ignore =
     W504
 
 # Per-file ignores
-per-file-ignores = 
+per-file-ignores =
     # imported but unused
     __init__.py:F401
 
