@@ -28,9 +28,9 @@ def evaluate(function_name: str, *args: Any, **kwargs: Any) -> float:
     :param function_name: Name of the function to use. This must exactly match
                           the actual function name.
     :type function_name: str
-    :param *args: Positional arguments to be passed to the benchmarking
+    :param \\*args: Positional arguments to be passed to the benchmarking
                    function.
-    :param **kwargs: Keyword arguments to be passed to the benchmarking
+    :param \\*\\*kwargs: Keyword arguments to be passed to the benchmarking
                        function.
 
     :raises ValueError: Invalid function name was provided.
