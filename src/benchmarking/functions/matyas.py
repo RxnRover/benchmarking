@@ -4,7 +4,7 @@ from benchmarking.functions.BenchmarkingFunction import BenchmarkingFunction
 
 
 class Matyas(BenchmarkingFunction):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
 
         self.set_function(matyas)
@@ -24,7 +24,10 @@ def matyas(xs: List[float]) -> float:
     Input domain: 2D square with bounds [-10, 10].
 
     Function in LaTeX format:
-    f(x) = 0.26 (x_1^2 + x_2^2) - 0.48 x_1 x_2
+
+    .. math::
+
+        f(x) = 0.26 (x_1^2 + x_2^2) - 0.48 x_1 x_2
 
     :param xs: Parameter list
     :type xs: List[float]

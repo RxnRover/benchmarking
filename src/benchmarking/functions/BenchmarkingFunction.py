@@ -1,43 +1,52 @@
 from abc import ABC
-from typing import List
+from typing import Any, Callable, List, Optional
 
 from benchmarking.functions.Optimum import Optimum
 
 
 class BenchmarkingFunction(ABC):
-    def __init__(self):
-        self._minima = []
-        self._global_minima = []
-        self._maxima = []
-        self._global_maxima = []
-        self._bounds = []
-        self._function = None
+    def __init__(self) -> None:
+        self._minima: List[Optimum] = []
+        self._global_minima: List[Optimum] = []
+        self._maxima: List[Optimum] = []
+        self._global_maxima: List[Optimum] = []
+        self._bounds: List[List[float]] = []
+        self._function: Optional[Callable] = None
 
     def __call__(self, xs: List[float]) -> float:
+        if self._function is None:
+            raise RuntimeError(
+                "Function was not set the benchmarking function."
+            )
+
         return self._function(xs)
 
-    def set_function(self, foo):
+    def set_function(self, foo: Callable) -> None:
         self._function = foo
 
-    def add_minimum(self, inputs, outputs, local=False):
+    def add_minimum(
+        self, inputs: List[float], outputs: float, local: bool = False
+    ) -> None:
         minimum = Optimum(inputs, outputs)
         self._minima.append(minimum)
 
         if not local:
             self._global_minima.append(minimum)
 
-    def add_maximum(self, inputs, outputs, local=False):
+    def add_maximum(
+        self, inputs: List[float], outputs: float, local: bool = False
+    ) -> None:
         maximum = Optimum(inputs, outputs)
         self._maxima.append(maximum)
 
         if not local:
             self._global_maxima.append(maximum)
 
-    def add_bound(self, bound):
+    def add_bound(self, bound: List[float]) -> None:
         self._bounds.append(bound)
 
     @property
-    def min(self):
+    def min(self) -> Optional[float]:
         """Get the value of the global minimum. Returns 'None' if there
         are no minima listed for the function.
         """
@@ -48,7 +57,7 @@ class BenchmarkingFunction(ABC):
         return self.global_minima[0].value
 
     @property
-    def max(self):
+    def max(self) -> Optional[float]:
         """Get the value of the global maximum. Returns 'None' if there
         are no maxima listed for the function.
         """
@@ -59,55 +68,55 @@ class BenchmarkingFunction(ABC):
         return self.global_maxima[0].value
 
     @property
-    def global_minima(self):
+    def global_minima(self) -> List[Optimum]:
         """List of global minima."""
         return self._global_minima
 
     @property
-    def minima(self):
+    def minima(self) -> List[Optimum]:
         """List of all minima."""
         return self._minima
 
     @property
-    def global_maxima(self):
+    def global_maxima(self) -> List[Optimum]:
         """List of global maxima."""
         return self._global_maxima
 
     @property
-    def maxima(self):
+    def maxima(self) -> List[Optimum]:
         """List of all maxima."""
         return self._maxima
 
     @property
-    def global_extrema(self):
+    def global_extrema(self) -> List[Optimum]:
         """List of global extrema."""
         return self.global_minima + self.global_maxima
 
     @property
-    def extrema(self):
+    def extrema(self) -> List[Optimum]:
         """List of all extrema."""
         return self.minima + self.maxima
 
     @property
-    def nmin(self):
+    def nmin(self) -> int:
         """Number of global minima."""
         return len(self.global_minima)
 
     @property
-    def nmax(self):
+    def nmax(self) -> int:
         """Number of global maxima."""
         return len(self.global_maxima)
 
     @property
-    def bounds(self):
+    def bounds(self) -> List[List[float]]:
         """Suggested boundaries to use."""
         return self._bounds
 
     @property
-    def metadata(self):
+    def metadata(self) -> dict:
         """Dictionary containing metadata about benchmarking function."""
 
-        metadata = {}
+        metadata: dict[str, Any] = {}
 
         metadata["all_minima_count"] = len(self.minima)
         metadata["all_minima_values"] = [f.value for f in self.minima]

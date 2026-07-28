@@ -5,7 +5,7 @@ from benchmarking.functions.BenchmarkingFunction import BenchmarkingFunction
 
 
 class BukinN6(BenchmarkingFunction):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
 
         self.set_function(bukin_n6)
@@ -22,10 +22,13 @@ def bukin_n6(xs: List[float]) -> float:
 
     Sixth Bukin function from https://www.sfu.ca/~ssurjano/bukin6.html.
 
-    Input domain: 2D rectangle x_1 = [-15, -5], x_2 = [-3, 3].
+    Input domain: 2D rectangle :math:`x_1 = [-15, -5], x_2 = [-3, 3]`.
 
     Function in LaTeX format:
-    f(x) = 100 \sqrt{|x_2 - 0.01 x_1^2|} + 0.01 |x_1 + 10|
+
+    .. math::
+
+        f(x) = 100 \\sqrt{|x_2 - 0.01 x_1^2|} + 0.01 |x_1 + 10|
 
     :param xs: Parameter list
     :type xs: List[float]

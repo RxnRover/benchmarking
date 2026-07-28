@@ -5,7 +5,7 @@ from benchmarking.functions.BenchmarkingFunction import BenchmarkingFunction
 
 
 class HolderTable(BenchmarkingFunction):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
 
         self.set_function(holder_table)
@@ -29,11 +29,14 @@ def holder_table(xs: List[float]) -> float:
 
     Holder Table function from https://www.sfu.ca/~ssurjano/holder.html.
 
-    Input domain: 2D square x_i = [-10, 10] for all i = 1, 2.
+    Input domain: 2D square :math:`x_i = [-10, 10]` for all i = 1, 2.
 
     Function in LaTeX format:
-    f(x) = -|\sin{(x_1)} \cos{(x_2)}
-             \exp{(|1 - \frac{\sqrt{x_1^2 + x_2^2}}{\pi}|)}|
+
+    .. math::
+
+        f(x) = -|\\sin{(x_1)} \\cos{(x_2)}
+                 \\exp{(|1 - \\frac{\\sqrt{x_1^2 + x_2^2}}{\\pi}|)}|
 
     :param xs: Parameter list
     :type xs: List[float]

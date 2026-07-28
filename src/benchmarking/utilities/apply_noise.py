@@ -1,16 +1,20 @@
 import numpy as np
 
 
-def apply_noise(value, sigma, mean=0, variance=1):
+def apply_noise(
+    value: float, sigma: float, mean: float = 0, variance: float = 1
+) -> float:
     """Apply noise to the given function values.
 
-    Applies noise of the form \sigma * N to the function value as
+    Applies noise of the form :math:`\\sigma * N` to the function value as
 
-    f_bar(x) = f(x) + \sigma * N
+    .. math::
+
+        f_bar(x) = f(x) + \\sigma * N
 
     where N is a normally distributed random variable with (by default)
-    mean = 0 and variance = 1. \sigma refers to the degree of
-    perturbation of the value with \sigma = 0 representing the
+    mean = 0 and variance = 1. :math:`\\sigma` refers to the degree of
+    perturbation of the value with :math:`\\sigma = 0` representing the
     unperturbed problem.
     """
 

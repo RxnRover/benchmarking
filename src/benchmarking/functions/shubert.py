@@ -11,7 +11,7 @@ class Shubert(BenchmarkingFunction):
     Source: https://www.sfu.ca/~ssurjano/shubert.html
     """
 
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
 
         self.set_function(shubert)
@@ -31,8 +31,11 @@ def shubert(xs: List[float]) -> float:
     Shubert function from https://www.sfu.ca/~ssurjano/shubert.html.
 
     Function in LaTeX format:
-    f(x) = \big(\sum_{i=5}^5 i cos((i + 1)x_1 + i)\big) \times
-           \big(\sum_{i=5}^5 i cos((i + 1)x_2 + i)\big)
+
+    .. math::
+
+        f(x) = \\big(\\sum_{i=5}^5 i cos((i + 1)x_1 + i)\\big) \\times
+               \\big(\\sum_{i=5}^5 i cos((i + 1)x_2 + i)\\big)
 
     :param xs: Parameter list
     :type xs: List[float]

@@ -5,7 +5,7 @@ from benchmarking.functions.BenchmarkingFunction import BenchmarkingFunction
 
 
 class Eggholder(BenchmarkingFunction):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
 
         self.set_function(eggholder)
@@ -22,11 +22,14 @@ def eggholder(xs: List[float]) -> float:
 
     Eggholder function from https://www.sfu.ca/~ssurjano/egg.html.
 
-    Input domain: 2D square x_i = [-512, 512] for all i = 1, 2.
+    Input domain: 2D square :math:`x_i = [-512, 512]` for all i = 1, 2.
 
     Function in LaTeX format:
-    f(x) = -(x_2 + 47) \sin{(\sqrt{|x_2 + \dfrac{x_1}{2} + 47|})} -
-           x_1 \sin{(\sqrt{|x_1 - (x_2 + 47)|})}
+
+    .. math::
+
+        f(x) = -(x_2 + 47) \\sin{(\\sqrt{|x_2 + \\dfrac{x_1}{2} + 47|})} -
+               x_1 \\sin{(\\sqrt{|x_1 - (x_2 + 47)|})}
 
     :param xs: Parameter list
     :type xs: List[float]

@@ -13,7 +13,7 @@ class Hartmann3D(BenchmarkingFunction):
     Source: https://www.sfu.ca/~ssurjano/hart3.html
     """
 
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
 
         self.set_function(hartmann)
@@ -28,6 +28,11 @@ class Hartmann3D(BenchmarkingFunction):
         self,
         xs: List[float],
     ) -> float:
+        if self._function is None:
+            raise RuntimeError(
+                "Function was not set the benchmarking function."
+            )
+
         alpha = np.array([1.0, 1.2, 3.0, 3.2])
 
         A = np.array(
@@ -52,7 +57,7 @@ class Hartmann6D(BenchmarkingFunction):
     Source: https://www.sfu.ca/~ssurjano/hart6.html
     """
 
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
 
         self.set_function(hartmann)
@@ -70,6 +75,11 @@ class Hartmann6D(BenchmarkingFunction):
         self,
         xs: List[float],
     ) -> float:
+        if self._function is None:
+            raise RuntimeError(
+                "Function was not set the benchmarking function."
+            )
+
         alpha = np.array([1.0, 1.2, 3.0, 3.2])
 
         A = np.array(
@@ -103,12 +113,15 @@ def hartmann(
     supports 3 or 6 dimensions, and dimensions are inferred by the length
     of the ``xs`` parameter list.
 
-    Hartmann nD function with (by default) values of \alpha, A, and P
+    Hartmann nD function with (by default) values of :math:`\\alpha`, A, and P
     from https://www.sfu.ca/~ssurjano/hart3.html.
 
     Function in LaTeX format:
-    f(x) = -\sum_{i=1}^{4} \alpha_i
-           \exp{\bigg(-\sum_{j=1}^n A_{ij}(x_j - P_{ij})^2\bigg)}
+
+    .. math::
+
+        f(x) = -\\sum_{i=1}^{4} \\alpha_i
+               \\exp{\\bigg(-\\sum_{j=1}^n A_{ij}(x_j - P_{ij})^2\\bigg)}
 
     :param xs: Input parameters
     :type xs: List[float]

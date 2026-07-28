@@ -4,7 +4,7 @@ from benchmarking.functions.BenchmarkingFunction import BenchmarkingFunction
 
 
 class Himmelblau(BenchmarkingFunction):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
 
         self.set_function(himmelblau)
@@ -42,7 +42,10 @@ def himmelblau(xs: List[float]) -> float:
     Input domain: Unknown.
 
     Function in LaTeX format:
-    f(x) = (x_1^2 + x_2 - 11)^2 + (x_1 + x_2^2 - 7)^2
+
+    .. math::
+
+        f(x) = (x_1^2 + x_2 - 11)^2 + (x_1 + x_2^2 - 7)^2
 
     :param xs: Parameter list
     :type xs: List[float]

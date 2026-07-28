@@ -22,10 +22,13 @@ def schwefel(xs: List[float]) -> float:
 
     Schwefel function from https://www.sfu.ca/~ssurjano/schwef.html.
 
-    Input domain: Hypercube x_i = [-500, 500], for all i=1, ..., d.
+    Input domain: Hypercube :math:`x_i = [-500, 500]`, for all i=1, ..., d.
 
     Function in LaTeX format:
-    f(x) = 418.9829 d - \sum_{i = 1}^d x_i \sin{(\sqrt{|x_i|})}
+
+    .. math::
+
+        f(x) = 418.9829 d - \\sum_{i = 1}^d x_i \\sin{(\\sqrt{|x_i|})}
 
     :param xs: Parameter list
     :type xs: List[float]
@@ -36,7 +39,7 @@ def schwefel(xs: List[float]) -> float:
 
     term_1 = 418.9829 * len(xs)
 
-    term_2 = 0
+    term_2 = 0.0
     for x in xs:
         term_2 += x * math.sin(math.sqrt(abs(x)))
 

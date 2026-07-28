@@ -33,6 +33,11 @@ class Shekel(BenchmarkingFunction):
             self.add_bound([0, 10])
 
     def __call__(self, xs: List[float]) -> float:
+        if self._function is None:
+            raise RuntimeError(
+                "Function was not set the benchmarking function."
+            )
+
         return self._function(xs, m=self.m)
 
 
@@ -51,12 +56,16 @@ def shekel(
 ) -> float:
     """Shekel 4D optimization test function.
 
-    Shekel 4D function with (by default) values of \beta and C
+    Shekel 4D function with (by default) values of :math:`\\beta` and C
     from https://www.sfu.ca/~ssurjano/shekel.html. Does not support
     m > 10 without a new C provided.
 
     Function in LaTeX format:
-    f(x) = -\sum_{i=1}^m \bigg(\sum_{j=1}^4(x_j - C_{ji})^2 + \beta_i\bigg)^-1
+
+    .. math::
+
+        f(x) = -\\sum_{i=1}^m
+               \\bigg(\\sum_{j=1}^4(x_j - C_{ji})^2 + \\beta_i\\bigg)^{-1}
 
     :param xs: List of input parameters
     :type xs: List[float]
@@ -71,14 +80,15 @@ def shekel(
     :param beta: 'beta' list, defaults to
                  [ 0.1, 0.2, 0.2, 0.4, 0.4, 0.6, 0.3, 0.7, 0.5, 0.5 ]
     :type beta: List[float], optional
+
     :return: Result of calculation
     :rtype: float
     """
 
-    outer_sum = 0
+    outer_sum = 0.0
 
     for i in range(m):
-        inner_sum = 0
+        inner_sum = 0.0
 
         for j in range(4):
             inner_sum += (xs[j] - C[j][i]) ** 2

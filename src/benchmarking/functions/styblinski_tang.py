@@ -22,10 +22,13 @@ def styblinski_tang(xs: List[float]) -> float:
 
     Styblinski-Tang function from https://www.sfu.ca/~ssurjano/stybtang.html.
 
-    Input domain: Hypercube x_i = [-5, 5] for all i=1, ..., d.
+    Input domain: Hypercube :math:`x_i = [-5, 5]` for all i=1, ..., d.
 
     Function in LaTeX format:
-    f(x) = \dfrac{1}{2} \sum_{i = 1}^d (x_i^4 - 16 x_i^2 + 5 x_i)
+
+    .. math::
+
+        f(x) = \\dfrac{1}{2} \\sum_{i = 1}^d (x_i^4 - 16 x_i^2 + 5 x_i)
 
     :param xs: Parameter list
     :type xs: List[float]

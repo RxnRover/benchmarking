@@ -2,11 +2,11 @@ from typing import List
 
 
 class Optimum:
-    def __init__(self, coordinates, value):
+    def __init__(self, coordinates: List[float], value: float) -> None:
         self._coordinates = coordinates
         self._value = value
 
-    def __str__(self):
+    def __str__(self) -> str:
         msg = "{}: {}".format(self.coordinates, self.value)
 
         return msg

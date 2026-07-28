@@ -1,3 +1,5 @@
+from typing import Any
+
 from benchmarking.functions.beale import Beale
 from benchmarking.functions.booth import Booth
 from benchmarking.functions.branin import Branin
@@ -18,7 +20,7 @@ from benchmarking.functions.styblinski_tang import StyblinskiTang
 from benchmarking.functions.three_hump_camel import ThreeHumpCamel
 
 
-def evaluate(function_name: str, *args, **kwargs):  # pragma: no cover
+def evaluate(function_name: str, *args: Any, **kwargs: Any) -> float:
     """Helper function to evaluate different benchmarking functions given
     the function name. This helps to not have to put this large if-elif
     statement everywhere that multiple functions are possible.
@@ -26,9 +28,9 @@ def evaluate(function_name: str, *args, **kwargs):  # pragma: no cover
     :param function_name: Name of the function to use. This must exactly match
                           the actual function name.
     :type function_name: str
-    :param \*args: Positional arguments to be passed to the benchmarking
+    :param *args: Positional arguments to be passed to the benchmarking
                    function.
-    :param \*\*kwargs: Keyword arguments to be passed to the benchmarking
+    :param **kwargs: Keyword arguments to be passed to the benchmarking
                        function.
 
     :raises ValueError: Invalid function name was provided.

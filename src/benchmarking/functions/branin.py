@@ -6,7 +6,7 @@ from benchmarking.functions.BenchmarkingFunction import BenchmarkingFunction
 
 
 class Branin(BenchmarkingFunction):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
 
         self.set_function(branin)
@@ -37,7 +37,10 @@ def branin(
     from https://www.sfu.ca/~ssurjano/branin.html.
 
     Function in LaTeX format:
-    f(x) = a(x_2 - bx_1^2 + cx_1 - r)^2 + s(1-t)cos(x_1) + s
+
+    .. math::
+
+        f(x) = a(x_2 - bx_1^2 + cx_1 - r)^2 + s(1-t)cos(x_1) + s
 
     :param xs: Input 'x' values.
     :type xs: List[float]
