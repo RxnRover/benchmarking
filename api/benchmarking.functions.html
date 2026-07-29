@@ -1,0 +1,880 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>benchmarking.functions namespace &mdash; Benchmarking unknown documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=3f1b9271"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="benchmarking.utilities namespace" href="benchmarking.utilities.html" />
+    <link rel="prev" title="benchmarking package" href="benchmarking.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Benchmarking
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../readme.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../authors.html">Authors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Module Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="benchmarking.html">benchmarking package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="benchmarking.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">benchmarking.functions namespace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="benchmarking.utilities.html">benchmarking.utilities namespace</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="benchmarking.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="benchmarking.html#module-benchmarking.evaluate">benchmarking.evaluate module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="benchmarking.html#module-benchmarking.function_data">benchmarking.function_data module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="benchmarking.html#module-benchmarking.function_ids">benchmarking.function_ids module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="benchmarking.html#module-benchmarking">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Benchmarking</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">benchmarking</a></li>
+          <li class="breadcrumb-item"><a href="benchmarking.html">benchmarking package</a></li>
+      <li class="breadcrumb-item active">benchmarking.functions namespace</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/benchmarking.functions.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-benchmarking.functions">
+<span id="benchmarking-functions-namespace"></span><h1>benchmarking.functions namespace<a class="headerlink" href="#module-benchmarking.functions" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-benchmarking.functions.BenchmarkingFunction">
+<span id="benchmarking-functions-benchmarkingfunction-module"></span><h2>benchmarking.functions.BenchmarkingFunction module<a class="headerlink" href="#module-benchmarking.functions.BenchmarkingFunction" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">benchmarking.functions.BenchmarkingFunction.</span></span><span class="sig-name descname"><span class="pre">BenchmarkingFunction</span></span><a class="reference internal" href="../_modules/benchmarking/functions/BenchmarkingFunction.html#BenchmarkingFunction"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.13/library/abc.html#abc.ABC" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction.add_bound">
+<span class="sig-name descname"><span class="pre">add_bound</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bound</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.13/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="reference internal" href="../_modules/benchmarking/functions/BenchmarkingFunction.html#BenchmarkingFunction.add_bound"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction.add_bound" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction.add_maximum">
+<span class="sig-name descname"><span class="pre">add_maximum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outputs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">local</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.13/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="reference internal" href="../_modules/benchmarking/functions/BenchmarkingFunction.html#BenchmarkingFunction.add_maximum"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction.add_maximum" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction.add_minimum">
+<span class="sig-name descname"><span class="pre">add_minimum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outputs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">local</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#bool" title="(in Python v3.13)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.13/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="reference internal" href="../_modules/benchmarking/functions/BenchmarkingFunction.html#BenchmarkingFunction.add_minimum"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction.add_minimum" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction.bounds">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">bounds</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.13/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.13/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction.bounds" title="Link to this definition"></a></dt>
+<dd><p>Suggested boundaries to use.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction.extrema">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">extrema</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.13/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#benchmarking.functions.Optimum.Optimum" title="benchmarking.functions.Optimum.Optimum"><span class="pre">Optimum</span></a><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction.extrema" title="Link to this definition"></a></dt>
+<dd><p>List of all extrema.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction.global_extrema">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">global_extrema</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.13/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#benchmarking.functions.Optimum.Optimum" title="benchmarking.functions.Optimum.Optimum"><span class="pre">Optimum</span></a><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction.global_extrema" title="Link to this definition"></a></dt>
+<dd><p>List of global extrema.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction.global_maxima">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">global_maxima</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.13/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#benchmarking.functions.Optimum.Optimum" title="benchmarking.functions.Optimum.Optimum"><span class="pre">Optimum</span></a><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction.global_maxima" title="Link to this definition"></a></dt>
+<dd><p>List of global maxima.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction.global_minima">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">global_minima</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.13/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#benchmarking.functions.Optimum.Optimum" title="benchmarking.functions.Optimum.Optimum"><span class="pre">Optimum</span></a><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction.global_minima" title="Link to this definition"></a></dt>
+<dd><p>List of global minima.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction.max">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">max</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.13/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span><a class="headerlink" href="#benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction.max" title="Link to this definition"></a></dt>
+<dd><p>Get the value of the global maximum. Returns ‘None’ if there
+are no maxima listed for the function.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction.maxima">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">maxima</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.13/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#benchmarking.functions.Optimum.Optimum" title="benchmarking.functions.Optimum.Optimum"><span class="pre">Optimum</span></a><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction.maxima" title="Link to this definition"></a></dt>
+<dd><p>List of all maxima.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction.metadata">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">metadata</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.13/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a></span><a class="headerlink" href="#benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction.metadata" title="Link to this definition"></a></dt>
+<dd><p>Dictionary containing metadata about benchmarking function.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction.min">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">min</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.13/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span><a class="headerlink" href="#benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction.min" title="Link to this definition"></a></dt>
+<dd><p>Get the value of the global minimum. Returns ‘None’ if there
+are no minima listed for the function.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction.minima">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">minima</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.13/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#benchmarking.functions.Optimum.Optimum" title="benchmarking.functions.Optimum.Optimum"><span class="pre">Optimum</span></a><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction.minima" title="Link to this definition"></a></dt>
+<dd><p>List of all minima.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction.nmax">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">nmax</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></span><a class="headerlink" href="#benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction.nmax" title="Link to this definition"></a></dt>
+<dd><p>Number of global maxima.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction.nmin">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">nmin</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></span><a class="headerlink" href="#benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction.nmin" title="Link to this definition"></a></dt>
+<dd><p>Number of global minima.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction.set_function">
+<span class="sig-name descname"><span class="pre">set_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">foo</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/typing.html#typing.Callable" title="(in Python v3.13)"><span class="pre">Callable</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.13/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="reference internal" href="../_modules/benchmarking/functions/BenchmarkingFunction.html#BenchmarkingFunction.set_function"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction.set_function" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-benchmarking.functions.Optimum">
+<span id="benchmarking-functions-optimum-module"></span><h2>benchmarking.functions.Optimum module<a class="headerlink" href="#module-benchmarking.functions.Optimum" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="benchmarking.functions.Optimum.Optimum">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">benchmarking.functions.Optimum.</span></span><span class="sig-name descname"><span class="pre">Optimum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coordinates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/benchmarking/functions/Optimum.html#Optimum"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.Optimum.Optimum" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.13/library/functions.html#object" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="benchmarking.functions.Optimum.Optimum.coordinates">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">coordinates</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.13/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#benchmarking.functions.Optimum.Optimum.coordinates" title="Link to this definition"></a></dt>
+<dd><p>Coordinates of the optimum.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="benchmarking.functions.Optimum.Optimum.ndim">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">ndim</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></span><a class="headerlink" href="#benchmarking.functions.Optimum.Optimum.ndim" title="Link to this definition"></a></dt>
+<dd><p>Number of dimensions (length of coordinates).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="benchmarking.functions.Optimum.Optimum.value">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">value</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><a class="headerlink" href="#benchmarking.functions.Optimum.Optimum.value" title="Link to this definition"></a></dt>
+<dd><p>Value of the optimum.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-benchmarking.functions.beale">
+<span id="benchmarking-functions-beale-module"></span><h2>benchmarking.functions.beale module<a class="headerlink" href="#module-benchmarking.functions.beale" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="benchmarking.functions.beale.Beale">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">benchmarking.functions.beale.</span></span><span class="sig-name descname"><span class="pre">Beale</span></span><a class="reference internal" href="../_modules/benchmarking/functions/beale.html#Beale"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.beale.Beale" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction" title="benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">BenchmarkingFunction</span></code></a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="benchmarking.functions.beale.beale">
+<span class="sig-prename descclassname"><span class="pre">benchmarking.functions.beale.</span></span><span class="sig-name descname"><span class="pre">beale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/benchmarking/functions/beale.html#beale"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.beale.beale" title="Link to this definition"></a></dt>
+<dd><p>Beale optimization test function.</p>
+<p>Beale function from <a class="reference external" href="https://www.sfu.ca/~ssurjano/beale.html">https://www.sfu.ca/~ssurjano/beale.html</a>.</p>
+<p>Input domain: 2D square <span class="math notranslate nohighlight">\(x_i = [-4.5, 4.5]\)</span> for all i = 1, 2.</p>
+<p>Function in LaTeX format:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = (1.5 - x_1 + x_1 x_2)^2 + (2.25 - x_1 + x_1 x_2^2)^2 +
+       (2.625 - x_1 + x_1 x_2^3)^2\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>xs</strong> (<em>List</em><em>[</em><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a><em>]</em>) – Parameter list</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Result of calculation</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-benchmarking.functions.booth">
+<span id="benchmarking-functions-booth-module"></span><h2>benchmarking.functions.booth module<a class="headerlink" href="#module-benchmarking.functions.booth" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="benchmarking.functions.booth.Booth">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">benchmarking.functions.booth.</span></span><span class="sig-name descname"><span class="pre">Booth</span></span><a class="reference internal" href="../_modules/benchmarking/functions/booth.html#Booth"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.booth.Booth" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction" title="benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">BenchmarkingFunction</span></code></a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="benchmarking.functions.booth.booth">
+<span class="sig-prename descclassname"><span class="pre">benchmarking.functions.booth.</span></span><span class="sig-name descname"><span class="pre">booth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/benchmarking/functions/booth.html#booth"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.booth.booth" title="Link to this definition"></a></dt>
+<dd><p>Booth optimization test function.</p>
+<p>Booth function from <a class="reference external" href="https://www.sfu.ca/~ssurjano/booth.html">https://www.sfu.ca/~ssurjano/booth.html</a>.</p>
+<p>Input domain: 2D square with bounds [-10, 10].</p>
+<p>Function in LaTeX format:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = (x_1 + 2x_2 - 7)^2 + (2x_1 + x_2 - 5)^2\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>xs</strong> (<em>List</em><em>[</em><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a><em>]</em>) – Parameter list</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Result of calculation</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-benchmarking.functions.branin">
+<span id="benchmarking-functions-branin-module"></span><h2>benchmarking.functions.branin module<a class="headerlink" href="#module-benchmarking.functions.branin" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="benchmarking.functions.branin.Branin">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">benchmarking.functions.branin.</span></span><span class="sig-name descname"><span class="pre">Branin</span></span><a class="reference internal" href="../_modules/benchmarking/functions/branin.html#Branin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.branin.Branin" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction" title="benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">BenchmarkingFunction</span></code></a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="benchmarking.functions.branin.branin">
+<span class="sig-prename descclassname"><span class="pre">benchmarking.functions.branin.</span></span><span class="sig-name descname"><span class="pre">branin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.12918450914398066</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.5915494309189535</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.039788735772973836</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/benchmarking/functions/branin.html#branin"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.branin.branin" title="Link to this definition"></a></dt>
+<dd><p>Branin, or Branin-Hoo, optimization test function.</p>
+<p>Branin function with (by default) values of a, b, c, r, s, t:
+a = 1, b = 5.1 / (4 * pi^2), c = 5 / pi, r = 6, s = 10 and t = 1 / (8 * pi)
+from <a class="reference external" href="https://www.sfu.ca/~ssurjano/branin.html">https://www.sfu.ca/~ssurjano/branin.html</a>.</p>
+<p>Function in LaTeX format:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = a(x_2 - bx_1^2 + cx_1 - r)^2 + s(1-t)cos(x_1) + s\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xs</strong> (<em>List</em><em>[</em><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a><em>]</em>) – Input ‘x’ values.</p></li>
+<li><p><strong>a</strong> (<a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a><em>, </em><em>optional</em>) – ‘a’ parameter, defaults to 1</p></li>
+<li><p><strong>b</strong> (<a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a><em>, </em><em>optional</em>) – ‘b’ parameter, defaults to 5.1/(4 * np.pi**2)</p></li>
+<li><p><strong>c</strong> (<a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a><em>, </em><em>optional</em>) – ‘c’ parameter, defaults to 5/np.pi</p></li>
+<li><p><strong>r</strong> (<a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a><em>, </em><em>optional</em>) – ‘r’ parameter, defaults to 6</p></li>
+<li><p><strong>s</strong> (<a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a><em>, </em><em>optional</em>) – ‘s’ parameter, defaults to 10</p></li>
+<li><p><strong>t</strong> (<a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a><em>, </em><em>optional</em>) – ‘t’ parameter, defaults to 1/(8 * np.pi)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Result of calculation.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-benchmarking.functions.bukin_n6">
+<span id="benchmarking-functions-bukin-n6-module"></span><h2>benchmarking.functions.bukin_n6 module<a class="headerlink" href="#module-benchmarking.functions.bukin_n6" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="benchmarking.functions.bukin_n6.BukinN6">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">benchmarking.functions.bukin_n6.</span></span><span class="sig-name descname"><span class="pre">BukinN6</span></span><a class="reference internal" href="../_modules/benchmarking/functions/bukin_n6.html#BukinN6"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.bukin_n6.BukinN6" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction" title="benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">BenchmarkingFunction</span></code></a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="benchmarking.functions.bukin_n6.bukin_n6">
+<span class="sig-prename descclassname"><span class="pre">benchmarking.functions.bukin_n6.</span></span><span class="sig-name descname"><span class="pre">bukin_n6</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/benchmarking/functions/bukin_n6.html#bukin_n6"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.bukin_n6.bukin_n6" title="Link to this definition"></a></dt>
+<dd><p>Sixth Bukin function optimization test function.</p>
+<p>Sixth Bukin function from <a class="reference external" href="https://www.sfu.ca/~ssurjano/bukin6.html">https://www.sfu.ca/~ssurjano/bukin6.html</a>.</p>
+<p>Input domain: 2D rectangle <span class="math notranslate nohighlight">\(x_1 = [-15, -5], x_2 = [-3, 3]\)</span>.</p>
+<p>Function in LaTeX format:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = 100 \sqrt{|x_2 - 0.01 x_1^2|} + 0.01 |x_1 + 10|\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>xs</strong> (<em>List</em><em>[</em><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a><em>]</em>) – Parameter list</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Result of calculation</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-benchmarking.functions.eggholder">
+<span id="benchmarking-functions-eggholder-module"></span><h2>benchmarking.functions.eggholder module<a class="headerlink" href="#module-benchmarking.functions.eggholder" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="benchmarking.functions.eggholder.Eggholder">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">benchmarking.functions.eggholder.</span></span><span class="sig-name descname"><span class="pre">Eggholder</span></span><a class="reference internal" href="../_modules/benchmarking/functions/eggholder.html#Eggholder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.eggholder.Eggholder" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction" title="benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">BenchmarkingFunction</span></code></a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="benchmarking.functions.eggholder.eggholder">
+<span class="sig-prename descclassname"><span class="pre">benchmarking.functions.eggholder.</span></span><span class="sig-name descname"><span class="pre">eggholder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/benchmarking/functions/eggholder.html#eggholder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.eggholder.eggholder" title="Link to this definition"></a></dt>
+<dd><p>Eggholder function optimization test function.</p>
+<p>Eggholder function from <a class="reference external" href="https://www.sfu.ca/~ssurjano/egg.html">https://www.sfu.ca/~ssurjano/egg.html</a>.</p>
+<p>Input domain: 2D square <span class="math notranslate nohighlight">\(x_i = [-512, 512]\)</span> for all i = 1, 2.</p>
+<p>Function in LaTeX format:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = -(x_2 + 47) \sin{(\sqrt{|x_2 + \dfrac{x_1}{2} + 47|})} -
+       x_1 \sin{(\sqrt{|x_1 - (x_2 + 47)|})}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>xs</strong> (<em>List</em><em>[</em><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a><em>]</em>) – Parameter list</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Result of calculation</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-benchmarking.functions.goldstein_price">
+<span id="benchmarking-functions-goldstein-price-module"></span><h2>benchmarking.functions.goldstein_price module<a class="headerlink" href="#module-benchmarking.functions.goldstein_price" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="benchmarking.functions.goldstein_price.GoldsteinPrice">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">benchmarking.functions.goldstein_price.</span></span><span class="sig-name descname"><span class="pre">GoldsteinPrice</span></span><a class="reference internal" href="../_modules/benchmarking/functions/goldstein_price.html#GoldsteinPrice"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.goldstein_price.GoldsteinPrice" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction" title="benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">BenchmarkingFunction</span></code></a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="benchmarking.functions.goldstein_price.goldstein_price">
+<span class="sig-prename descclassname"><span class="pre">benchmarking.functions.goldstein_price.</span></span><span class="sig-name descname"><span class="pre">goldstein_price</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/benchmarking/functions/goldstein_price.html#goldstein_price"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.goldstein_price.goldstein_price" title="Link to this definition"></a></dt>
+<dd><p>Goldstein-Price optimization test function.</p>
+<p>Goldstein-Price function from <a class="reference external" href="https://www.sfu.ca/~ssurjano/goldpr.html">https://www.sfu.ca/~ssurjano/goldpr.html</a>.</p>
+<p>Function in LaTeX format:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = [1 + (x_1 + x_2 + 1)^2
+       (19 - 14 x_1 + 3 x_1^2 - 14 x_2 + 6 x_1 x_2 + 3 x_2^2)]
+       \times [30 + (2 x_1 - 3 x_2)^2
+       (18 - 32 x_1 + 12 x_1^2 + 48 x_2 - 36 x_1 x_2 + 27 x_2^2)]\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>xs</strong> (<em>List</em><em>[</em><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a><em>]</em>) – Parameter list</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Result of calculation</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-benchmarking.functions.hartmann">
+<span id="benchmarking-functions-hartmann-module"></span><h2>benchmarking.functions.hartmann module<a class="headerlink" href="#module-benchmarking.functions.hartmann" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="benchmarking.functions.hartmann.Hartmann3D">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">benchmarking.functions.hartmann.</span></span><span class="sig-name descname"><span class="pre">Hartmann3D</span></span><a class="reference internal" href="../_modules/benchmarking/functions/hartmann.html#Hartmann3D"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.hartmann.Hartmann3D" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction" title="benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">BenchmarkingFunction</span></code></a></p>
+<p>Hartmann 3-Dimensional Function</p>
+<p>Source: <a class="reference external" href="https://www.sfu.ca/~ssurjano/hart3.html">https://www.sfu.ca/~ssurjano/hart3.html</a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="benchmarking.functions.hartmann.Hartmann6D">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">benchmarking.functions.hartmann.</span></span><span class="sig-name descname"><span class="pre">Hartmann6D</span></span><a class="reference internal" href="../_modules/benchmarking/functions/hartmann.html#Hartmann6D"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.hartmann.Hartmann6D" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction" title="benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">BenchmarkingFunction</span></code></a></p>
+<p>Hartmann 6-Dimensional Function</p>
+<p>Source: <a class="reference external" href="https://www.sfu.ca/~ssurjano/hart6.html">https://www.sfu.ca/~ssurjano/hart6.html</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="benchmarking.functions.hartmann.hartmann">
+<span class="sig-prename descclassname"><span class="pre">benchmarking.functions.hartmann.</span></span><span class="sig-name descname"><span class="pre">hartmann</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.5)"><span class="pre">ndarray</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">A</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.5)"><span class="pre">ndarray</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">P</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.5)"><span class="pre">ndarray</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/benchmarking/functions/hartmann.html#hartmann"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.hartmann.hartmann" title="Link to this definition"></a></dt>
+<dd><p>Hartmann n-Dimensional optimization test function. This function
+supports 3 or 6 dimensions, and dimensions are inferred by the length
+of the <code class="docutils literal notranslate"><span class="pre">xs</span></code> parameter list.</p>
+<p>Hartmann nD function with (by default) values of <span class="math notranslate nohighlight">\(\alpha\)</span>, A, and P
+from <a class="reference external" href="https://www.sfu.ca/~ssurjano/hart3.html">https://www.sfu.ca/~ssurjano/hart3.html</a>.</p>
+<p>Function in LaTeX format:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = -\sum_{i=1}^{4} \alpha_i
+       \exp{\bigg(-\sum_{j=1}^n A_{ij}(x_j - P_{ij})^2\bigg)}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xs</strong> (<em>List</em><em>[</em><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a><em>]</em>) – Input parameters</p></li>
+<li><p><strong>alpha</strong> (<em>np.ndarray</em><em>, </em><em>optional</em>) – Alpha array, leave as ‘None’ to get default for given
+dimension count, defaults to None</p></li>
+<li><p><strong>A</strong> (<em>np.ndarray</em><em>, </em><em>optional</em>) – ‘A’ array, leave as ‘None’ to get default for given dimension
+count, defaults to None</p></li>
+<li><p><strong>P</strong> (<em>np.ndarray</em><em>, </em><em>optional</em>) – ‘P’ array, leave as ‘None’ to get default for given dimension
+count, defaults to None</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.13/library/exceptions.html#ValueError" title="(in Python v3.13)"><strong>ValueError</strong></a> – Invalid dimension count.</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Result of calculation.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-benchmarking.functions.himmelblau">
+<span id="benchmarking-functions-himmelblau-module"></span><h2>benchmarking.functions.himmelblau module<a class="headerlink" href="#module-benchmarking.functions.himmelblau" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="benchmarking.functions.himmelblau.Himmelblau">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">benchmarking.functions.himmelblau.</span></span><span class="sig-name descname"><span class="pre">Himmelblau</span></span><a class="reference internal" href="../_modules/benchmarking/functions/himmelblau.html#Himmelblau"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.himmelblau.Himmelblau" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction" title="benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">BenchmarkingFunction</span></code></a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="benchmarking.functions.himmelblau.himmelblau">
+<span class="sig-prename descclassname"><span class="pre">benchmarking.functions.himmelblau.</span></span><span class="sig-name descname"><span class="pre">himmelblau</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/benchmarking/functions/himmelblau.html#himmelblau"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.himmelblau.himmelblau" title="Link to this definition"></a></dt>
+<dd><p>Himmelblau’s optimization test function.</p>
+<p>Himmelblau’s function from
+<a class="reference external" href="https://en.wikipedia.org/wiki/Himmelblau's_function">https://en.wikipedia.org/wiki/Himmelblau’s_function</a>.</p>
+<p>Input domain: Unknown.</p>
+<p>Function in LaTeX format:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = (x_1^2 + x_2 - 11)^2 + (x_1 + x_2^2 - 7)^2\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>xs</strong> (<em>List</em><em>[</em><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a><em>]</em>) – Parameter list</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Result of calculation</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-benchmarking.functions.holder_table">
+<span id="benchmarking-functions-holder-table-module"></span><h2>benchmarking.functions.holder_table module<a class="headerlink" href="#module-benchmarking.functions.holder_table" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="benchmarking.functions.holder_table.HolderTable">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">benchmarking.functions.holder_table.</span></span><span class="sig-name descname"><span class="pre">HolderTable</span></span><a class="reference internal" href="../_modules/benchmarking/functions/holder_table.html#HolderTable"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.holder_table.HolderTable" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction" title="benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">BenchmarkingFunction</span></code></a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="benchmarking.functions.holder_table.holder_table">
+<span class="sig-prename descclassname"><span class="pre">benchmarking.functions.holder_table.</span></span><span class="sig-name descname"><span class="pre">holder_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/benchmarking/functions/holder_table.html#holder_table"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.holder_table.holder_table" title="Link to this definition"></a></dt>
+<dd><p>Holder Table function optimization test function.</p>
+<p>Holder Table function from <a class="reference external" href="https://www.sfu.ca/~ssurjano/holder.html">https://www.sfu.ca/~ssurjano/holder.html</a>.</p>
+<p>Input domain: 2D square <span class="math notranslate nohighlight">\(x_i = [-10, 10]\)</span> for all i = 1, 2.</p>
+<p>Function in LaTeX format:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = -|\sin{(x_1)} \cos{(x_2)}
+         \exp{(|1 - \frac{\sqrt{x_1^2 + x_2^2}}{\pi}|)}|\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>xs</strong> (<em>List</em><em>[</em><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a><em>]</em>) – Parameter list</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Result of calculation</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-benchmarking.functions.matyas">
+<span id="benchmarking-functions-matyas-module"></span><h2>benchmarking.functions.matyas module<a class="headerlink" href="#module-benchmarking.functions.matyas" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="benchmarking.functions.matyas.Matyas">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">benchmarking.functions.matyas.</span></span><span class="sig-name descname"><span class="pre">Matyas</span></span><a class="reference internal" href="../_modules/benchmarking/functions/matyas.html#Matyas"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.matyas.Matyas" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction" title="benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">BenchmarkingFunction</span></code></a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="benchmarking.functions.matyas.matyas">
+<span class="sig-prename descclassname"><span class="pre">benchmarking.functions.matyas.</span></span><span class="sig-name descname"><span class="pre">matyas</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/benchmarking/functions/matyas.html#matyas"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.matyas.matyas" title="Link to this definition"></a></dt>
+<dd><p>Matyas optimization test function.</p>
+<p>Matyas function from <a class="reference external" href="https://www.sfu.ca/~ssurjano/matya.html">https://www.sfu.ca/~ssurjano/matya.html</a>.</p>
+<p>Input domain: 2D square with bounds [-10, 10].</p>
+<p>Function in LaTeX format:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = 0.26 (x_1^2 + x_2^2) - 0.48 x_1 x_2\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>xs</strong> (<em>List</em><em>[</em><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a><em>]</em>) – Parameter list</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Result of calculation</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-benchmarking.functions.rosenbrock">
+<span id="benchmarking-functions-rosenbrock-module"></span><h2>benchmarking.functions.rosenbrock module<a class="headerlink" href="#module-benchmarking.functions.rosenbrock" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="benchmarking.functions.rosenbrock.Rosenbrock">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">benchmarking.functions.rosenbrock.</span></span><span class="sig-name descname"><span class="pre">Rosenbrock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">4</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/benchmarking/functions/rosenbrock.html#Rosenbrock"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.rosenbrock.Rosenbrock" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction" title="benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">BenchmarkingFunction</span></code></a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="benchmarking.functions.rosenbrock.rosenbrock">
+<span class="sig-prename descclassname"><span class="pre">benchmarking.functions.rosenbrock.</span></span><span class="sig-name descname"><span class="pre">rosenbrock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/benchmarking/functions/rosenbrock.html#rosenbrock"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.rosenbrock.rosenbrock" title="Link to this definition"></a></dt>
+<dd><p>Rosenbrock nD optimization test function. Dimensions are inferred
+from the length of the input paremeter list, <code class="docutils literal notranslate"><span class="pre">xs</span></code>.</p>
+<p>Rosenbrock nD function from <a class="reference external" href="https://www.sfu.ca/~ssurjano/rosen.html">https://www.sfu.ca/~ssurjano/rosen.html</a>.</p>
+<p>Function in LaTeX format:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = \sum_{i=1}^{d-1} [100(x_{i+1} - x_i^2)^2 + (x_i - 1)^2]\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>xs</strong> (<em>List</em><em>[</em><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a><em>]</em>) – List of input parameters</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Result of calculation</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-benchmarking.functions.schwefel">
+<span id="benchmarking-functions-schwefel-module"></span><h2>benchmarking.functions.schwefel module<a class="headerlink" href="#module-benchmarking.functions.schwefel" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="benchmarking.functions.schwefel.Schwefel">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">benchmarking.functions.schwefel.</span></span><span class="sig-name descname"><span class="pre">Schwefel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">4</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/benchmarking/functions/schwefel.html#Schwefel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.schwefel.Schwefel" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction" title="benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">BenchmarkingFunction</span></code></a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="benchmarking.functions.schwefel.schwefel">
+<span class="sig-prename descclassname"><span class="pre">benchmarking.functions.schwefel.</span></span><span class="sig-name descname"><span class="pre">schwefel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/benchmarking/functions/schwefel.html#schwefel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.schwefel.schwefel" title="Link to this definition"></a></dt>
+<dd><p>Schwefel optimization test function.</p>
+<p>Schwefel function from <a class="reference external" href="https://www.sfu.ca/~ssurjano/schwef.html">https://www.sfu.ca/~ssurjano/schwef.html</a>.</p>
+<p>Input domain: Hypercube <span class="math notranslate nohighlight">\(x_i = [-500, 500]\)</span>, for all i=1, …, d.</p>
+<p>Function in LaTeX format:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = 418.9829 d - \sum_{i = 1}^d x_i \sin{(\sqrt{|x_i|})}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>xs</strong> (<em>List</em><em>[</em><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a><em>]</em>) – Parameter list</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Result of calculation</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-benchmarking.functions.shekel">
+<span id="benchmarking-functions-shekel-module"></span><h2>benchmarking.functions.shekel module<a class="headerlink" href="#module-benchmarking.functions.shekel" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="benchmarking.functions.shekel.Shekel">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">benchmarking.functions.shekel.</span></span><span class="sig-name descname"><span class="pre">Shekel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">m</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/benchmarking/functions/shekel.html#Shekel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.shekel.Shekel" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction" title="benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">BenchmarkingFunction</span></code></a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="benchmarking.functions.shekel.shekel">
+<span class="sig-prename descclassname"><span class="pre">benchmarking.functions.shekel.</span></span><span class="sig-name descname"><span class="pre">shekel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">C</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.5)"><span class="pre">ndarray</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">array([[4.,</span> <span class="pre">1.,</span> <span class="pre">8.,</span> <span class="pre">6.,</span> <span class="pre">3.,</span> <span class="pre">2.,</span> <span class="pre">5.,</span> <span class="pre">8.,</span> <span class="pre">6.,</span> <span class="pre">7.],</span> <span class="pre">[4.,</span> <span class="pre">1.,</span> <span class="pre">8.,</span> <span class="pre">6.,</span> <span class="pre">7.,</span> <span class="pre">9.,</span> <span class="pre">3.,</span> <span class="pre">1.,</span> <span class="pre">2.,</span> <span class="pre">3.6],</span> <span class="pre">[4.,</span> <span class="pre">1.,</span> <span class="pre">8.,</span> <span class="pre">6.,</span> <span class="pre">3.,</span> <span class="pre">2.,</span> <span class="pre">5.,</span> <span class="pre">8.,</span> <span class="pre">6.,</span> <span class="pre">7.],</span> <span class="pre">[4.,</span> <span class="pre">1.,</span> <span class="pre">8.,</span> <span class="pre">6.,</span> <span class="pre">7.,</span> <span class="pre">9.,</span> <span class="pre">3.,</span> <span class="pre">1.,</span> <span class="pre">2.,</span> <span class="pre">3.6]])</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[0.1,</span> <span class="pre">0.2,</span> <span class="pre">0.2,</span> <span class="pre">0.4,</span> <span class="pre">0.4,</span> <span class="pre">0.6,</span> <span class="pre">0.3,</span> <span class="pre">0.7,</span> <span class="pre">0.5,</span> <span class="pre">0.5]</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/benchmarking/functions/shekel.html#shekel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.shekel.shekel" title="Link to this definition"></a></dt>
+<dd><p>Shekel 4D optimization test function.</p>
+<p>Shekel 4D function with (by default) values of <span class="math notranslate nohighlight">\(\beta\)</span> and C
+from <a class="reference external" href="https://www.sfu.ca/~ssurjano/shekel.html">https://www.sfu.ca/~ssurjano/shekel.html</a>. Does not support
+m &gt; 10 without a new C provided.</p>
+<p>Function in LaTeX format:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = -\sum_{i=1}^m
+       \bigg(\sum_{j=1}^4(x_j - C_{ji})^2 + \beta_i\bigg)^{-1}\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xs</strong> (<em>List</em><em>[</em><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a><em>]</em>) – List of input parameters</p></li>
+<li><p><strong>m</strong> (<a class="reference external" href="https://docs.python.org/3.13/library/functions.html#int" title="(in Python v3.13)"><em>int</em></a><em>, </em><em>optional</em>) – ‘m’ parameter, defaults to 10</p></li>
+<li><p><strong>C</strong> (<em>np.ndarray</em><em>, </em><em>optional</em>) – <p>‘C’ array, defaults to:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">4.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">,</span> <span class="mf">6.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">,</span> <span class="mf">6.0</span><span class="p">,</span> <span class="mf">7.0</span><span class="p">],</span>
+          <span class="p">[</span><span class="mf">4.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">,</span> <span class="mf">6.0</span><span class="p">,</span> <span class="mf">7.0</span><span class="p">,</span> <span class="mf">9.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.6</span><span class="p">],</span>
+          <span class="p">[</span><span class="mf">4.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">,</span> <span class="mf">6.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">,</span> <span class="mf">6.0</span><span class="p">,</span> <span class="mf">7.0</span><span class="p">],</span>
+          <span class="p">[</span><span class="mf">4.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">,</span> <span class="mf">6.0</span><span class="p">,</span> <span class="mf">7.0</span><span class="p">,</span> <span class="mf">9.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.6</span><span class="p">]])</span>
+</pre></div>
+</div>
+</p></li>
+<li><p><strong>beta</strong> (<em>List</em><em>[</em><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a><em>]</em><em>, </em><em>optional</em>) – <p>‘beta’ list, defaults to</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">[</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span> <span class="p">]</span>
+</pre></div>
+</div>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Result of calculation</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-benchmarking.functions.shubert">
+<span id="benchmarking-functions-shubert-module"></span><h2>benchmarking.functions.shubert module<a class="headerlink" href="#module-benchmarking.functions.shubert" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="benchmarking.functions.shubert.Shubert">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">benchmarking.functions.shubert.</span></span><span class="sig-name descname"><span class="pre">Shubert</span></span><a class="reference internal" href="../_modules/benchmarking/functions/shubert.html#Shubert"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.shubert.Shubert" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction" title="benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">BenchmarkingFunction</span></code></a></p>
+<p>Shubert Function</p>
+<p>Source: <a class="reference external" href="https://www.sfu.ca/~ssurjano/shubert.html">https://www.sfu.ca/~ssurjano/shubert.html</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="benchmarking.functions.shubert.shubert">
+<span class="sig-prename descclassname"><span class="pre">benchmarking.functions.shubert.</span></span><span class="sig-name descname"><span class="pre">shubert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/benchmarking/functions/shubert.html#shubert"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.shubert.shubert" title="Link to this definition"></a></dt>
+<dd><p>Shubert optimization test function.</p>
+<p>Shubert function from <a class="reference external" href="https://www.sfu.ca/~ssurjano/shubert.html">https://www.sfu.ca/~ssurjano/shubert.html</a>.</p>
+<p>Function in LaTeX format:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = \big(\sum_{i=5}^5 i cos((i + 1)x_1 + i)\big) \times
+       \big(\sum_{i=5}^5 i cos((i + 1)x_2 + i)\big)\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>xs</strong> (<em>List</em><em>[</em><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a><em>]</em>) – Parameter list</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Result of calculation</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-benchmarking.functions.six_hump_camel">
+<span id="benchmarking-functions-six-hump-camel-module"></span><h2>benchmarking.functions.six_hump_camel module<a class="headerlink" href="#module-benchmarking.functions.six_hump_camel" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="benchmarking.functions.six_hump_camel.SixHumpCamel">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">benchmarking.functions.six_hump_camel.</span></span><span class="sig-name descname"><span class="pre">SixHumpCamel</span></span><a class="reference internal" href="../_modules/benchmarking/functions/six_hump_camel.html#SixHumpCamel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.six_hump_camel.SixHumpCamel" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction" title="benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">BenchmarkingFunction</span></code></a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="benchmarking.functions.six_hump_camel.six_hump_camel">
+<span class="sig-prename descclassname"><span class="pre">benchmarking.functions.six_hump_camel.</span></span><span class="sig-name descname"><span class="pre">six_hump_camel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/benchmarking/functions/six_hump_camel.html#six_hump_camel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.six_hump_camel.six_hump_camel" title="Link to this definition"></a></dt>
+<dd><p>Six-hump camel optimization test function.</p>
+<p>Six-hump camel function from <a class="reference external" href="https://www.sfu.ca/~ssurjano/camel6.html">https://www.sfu.ca/~ssurjano/camel6.html</a>.</p>
+<p>Function in LaTeX format:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = (4 - 2.1 x_1^2 + \frac{x_1^4}{3}) x_1^2 + x_1 x_2 +
+       (-4 + 4 x_2^2) x_2^2\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>xs</strong> (<a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Parameter list</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Result of calculation</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-benchmarking.functions.sphere">
+<span id="benchmarking-functions-sphere-module"></span><h2>benchmarking.functions.sphere module<a class="headerlink" href="#module-benchmarking.functions.sphere" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="benchmarking.functions.sphere.Sphere">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">benchmarking.functions.sphere.</span></span><span class="sig-name descname"><span class="pre">Sphere</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">4</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/benchmarking/functions/sphere.html#Sphere"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.sphere.Sphere" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction" title="benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">BenchmarkingFunction</span></code></a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="benchmarking.functions.sphere.sphere">
+<span class="sig-prename descclassname"><span class="pre">benchmarking.functions.sphere.</span></span><span class="sig-name descname"><span class="pre">sphere</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/benchmarking/functions/sphere.html#sphere"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.sphere.sphere" title="Link to this definition"></a></dt>
+<dd><p>Sphere optimization test function.</p>
+<p>Sphere function from <a class="reference external" href="https://www.sfu.ca/~ssurjano/spheref.html">https://www.sfu.ca/~ssurjano/spheref.html</a>.</p>
+<p>Input domain: Hypercube <span class="math notranslate nohighlight">\(x_i = [-5.12, 5.12]\)</span> for all i=1, …, d.</p>
+<p>Function in LaTeX format:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = \sum_{i=1}^d x_i^2\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>xs</strong> (<em>List</em><em>[</em><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a><em>]</em>) – Parameter list</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Result of calculation</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-benchmarking.functions.styblinski_tang">
+<span id="benchmarking-functions-styblinski-tang-module"></span><h2>benchmarking.functions.styblinski_tang module<a class="headerlink" href="#module-benchmarking.functions.styblinski_tang" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="benchmarking.functions.styblinski_tang.StyblinskiTang">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">benchmarking.functions.styblinski_tang.</span></span><span class="sig-name descname"><span class="pre">StyblinskiTang</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#int" title="(in Python v3.13)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">4</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/benchmarking/functions/styblinski_tang.html#StyblinskiTang"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.styblinski_tang.StyblinskiTang" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction" title="benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">BenchmarkingFunction</span></code></a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="benchmarking.functions.styblinski_tang.styblinski_tang">
+<span class="sig-prename descclassname"><span class="pre">benchmarking.functions.styblinski_tang.</span></span><span class="sig-name descname"><span class="pre">styblinski_tang</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/benchmarking/functions/styblinski_tang.html#styblinski_tang"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.styblinski_tang.styblinski_tang" title="Link to this definition"></a></dt>
+<dd><p>Styblinski-Tang optimization test function.</p>
+<p>Styblinski-Tang function from <a class="reference external" href="https://www.sfu.ca/~ssurjano/stybtang.html">https://www.sfu.ca/~ssurjano/stybtang.html</a>.</p>
+<p>Input domain: Hypercube <span class="math notranslate nohighlight">\(x_i = [-5, 5]\)</span> for all i=1, …, d.</p>
+<p>Function in LaTeX format:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = \dfrac{1}{2} \sum_{i = 1}^d (x_i^4 - 16 x_i^2 + 5 x_i)\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>xs</strong> (<em>List</em><em>[</em><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a><em>]</em>) – Parameter list</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Result of calculation</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-benchmarking.functions.three_hump_camel">
+<span id="benchmarking-functions-three-hump-camel-module"></span><h2>benchmarking.functions.three_hump_camel module<a class="headerlink" href="#module-benchmarking.functions.three_hump_camel" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="benchmarking.functions.three_hump_camel.ThreeHumpCamel">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">benchmarking.functions.three_hump_camel.</span></span><span class="sig-name descname"><span class="pre">ThreeHumpCamel</span></span><a class="reference internal" href="../_modules/benchmarking/functions/three_hump_camel.html#ThreeHumpCamel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.three_hump_camel.ThreeHumpCamel" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction" title="benchmarking.functions.BenchmarkingFunction.BenchmarkingFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">BenchmarkingFunction</span></code></a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="benchmarking.functions.three_hump_camel.three_hump_camel">
+<span class="sig-prename descclassname"><span class="pre">benchmarking.functions.three_hump_camel.</span></span><span class="sig-name descname"><span class="pre">three_hump_camel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.13/library/typing.html#typing.List" title="(in Python v3.13)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/benchmarking/functions/three_hump_camel.html#three_hump_camel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#benchmarking.functions.three_hump_camel.three_hump_camel" title="Link to this definition"></a></dt>
+<dd><p>Three-hump camel optimization test function.</p>
+<p>Three-hump camel function from <a class="reference external" href="https://www.sfu.ca/~ssurjano/camel3.html">https://www.sfu.ca/~ssurjano/camel3.html</a>.</p>
+<p>Input domain: 2D square <span class="math notranslate nohighlight">\(x_i = [-5, 5]\)</span> for all i = 1, 2.</p>
+<p>Function in LaTeX format:</p>
+<div class="math notranslate nohighlight">
+\[f(x) = 2 x_1^2 - 1.05 x_1^4 + \dfrac{x_1^6}{6} + x_1 x_2 + x_2^2\]</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>xs</strong> (<a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Parameter list</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Result of calculation</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.13/library/functions.html#float" title="(in Python v3.13)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="benchmarking.html" class="btn btn-neutral float-left" title="benchmarking package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="benchmarking.utilities.html" class="btn btn-neutral float-right" title="benchmarking.utilities namespace" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, 2026 Iowa State University.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

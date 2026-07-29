@@ -1,0 +1,167 @@
+benchmarking.functions namespace
+================================
+
+.. py:module:: benchmarking.functions
+
+Submodules
+----------
+
+benchmarking.functions.BenchmarkingFunction module
+--------------------------------------------------
+
+.. automodule:: benchmarking.functions.BenchmarkingFunction
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+benchmarking.functions.Optimum module
+-------------------------------------
+
+.. automodule:: benchmarking.functions.Optimum
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+benchmarking.functions.beale module
+-----------------------------------
+
+.. automodule:: benchmarking.functions.beale
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+benchmarking.functions.booth module
+-----------------------------------
+
+.. automodule:: benchmarking.functions.booth
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+benchmarking.functions.branin module
+------------------------------------
+
+.. automodule:: benchmarking.functions.branin
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+benchmarking.functions.bukin\_n6 module
+---------------------------------------
+
+.. automodule:: benchmarking.functions.bukin_n6
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+benchmarking.functions.eggholder module
+---------------------------------------
+
+.. automodule:: benchmarking.functions.eggholder
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+benchmarking.functions.goldstein\_price module
+----------------------------------------------
+
+.. automodule:: benchmarking.functions.goldstein_price
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+benchmarking.functions.hartmann module
+--------------------------------------
+
+.. automodule:: benchmarking.functions.hartmann
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+benchmarking.functions.himmelblau module
+----------------------------------------
+
+.. automodule:: benchmarking.functions.himmelblau
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+benchmarking.functions.holder\_table module
+-------------------------------------------
+
+.. automodule:: benchmarking.functions.holder_table
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+benchmarking.functions.matyas module
+------------------------------------
+
+.. automodule:: benchmarking.functions.matyas
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+benchmarking.functions.rosenbrock module
+----------------------------------------
+
+.. automodule:: benchmarking.functions.rosenbrock
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+benchmarking.functions.schwefel module
+--------------------------------------
+
+.. automodule:: benchmarking.functions.schwefel
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+benchmarking.functions.shekel module
+------------------------------------
+
+.. automodule:: benchmarking.functions.shekel
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+benchmarking.functions.shubert module
+-------------------------------------
+
+.. automodule:: benchmarking.functions.shubert
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+benchmarking.functions.six\_hump\_camel module
+----------------------------------------------
+
+.. automodule:: benchmarking.functions.six_hump_camel
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+benchmarking.functions.sphere module
+------------------------------------
+
+.. automodule:: benchmarking.functions.sphere
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+benchmarking.functions.styblinski\_tang module
+----------------------------------------------
+
+.. automodule:: benchmarking.functions.styblinski_tang
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+benchmarking.functions.three\_hump\_camel module
+------------------------------------------------
+
+.. automodule:: benchmarking.functions.three_hump_camel
+   :members:
+   :show-inheritance:
+   :undoc-members:

@@ -1,0 +1,190 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>benchmarking functions &mdash; Benchmarking unknown documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=3f1b9271"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="License" href="license.html" />
+    <link rel="prev" title="Benchmarking Function Documentation" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Benchmarking
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#making-changes-contributing">Making Changes &amp; Contributing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="authors.html">Authors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/modules.html">Module Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Benchmarking</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">benchmarking functions</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/readme.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <a class="reference external image-reference" href="https://rxnrover.github.io/benchmarking/" id="readme"><img alt="Documentation link" src="https://img.shields.io/badge/Documentation-grey" />
+</a>
+<a class="reference external image-reference" href="https://pyscaffold.org/"><img alt="Project generated with PyScaffold" src="https://img.shields.io/badge/-PyScaffold-005CA0?logo=pyscaffold" />
+</a>
+<section id="benchmarking-functions">
+<h1>benchmarking functions<a class="headerlink" href="#benchmarking-functions" title="Link to this heading"></a></h1>
+<blockquote>
+<div><p>A collection of benchmarking functions for use with optimization algorithms.</p>
+</div></blockquote>
+<p>This package provides a collection of standard test functions used to benchmark
+the performance of optimization algorithms. Each function exposes its callable
+form along with metadata such as its known global (and, where applicable, local)
+minima/maxima and suggested input bounds, making it easy to score an optimizer’s
+results against ground truth.</p>
+<p>The original 10 functions (Branin, Goldstein-Price, Hartmann 3D, Hartmann 6D,
+Rosenbrock, Shekel 5, Shekel 7, Shekel 10, Shubert, and Six-Hump Camel) match
+the set used to benchmark the CyRxnOpt optimizer and are the same functions used
+in the SNOBFIT paper for its own benchmarking.</p>
+<p>This repository is intended to grow beyond that original set of 10 test
+problems. It currently also includes Beale, Booth, Bukin N.6, Eggholder,
+Himmelblau, Holder Table, Matyas, Schwefel, Sphere, Styblinski-Tang, and
+Three-Hump Camel, with more functions expected to be added over time.</p>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h2>
+<p>Clone the repository and install it with pip:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/RxnRover/benchmarking.git
+<span class="nb">cd</span><span class="w"> </span>benchmarking
+pip<span class="w"> </span>install<span class="w"> </span>.
+</pre></div>
+</div>
+</section>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h2>
+<p>Each benchmarking function is implemented as a class that can be called directly
+with a list of input coordinates. For example, to evaluate the Branin function
+and inspect its metadata:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">benchmarking.functions.branin</span><span class="w"> </span><span class="kn">import</span> <span class="n">Branin</span>
+
+<span class="n">branin</span> <span class="o">=</span> <span class="n">Branin</span><span class="p">()</span>
+
+<span class="c1"># Evaluate the function at a point.</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">branin</span><span class="p">([</span><span class="o">-</span><span class="mf">3.14</span><span class="p">,</span> <span class="mf">12.275</span><span class="p">])</span>
+
+<span class="c1"># Metadata about the function: known minima/maxima, bounds, etc.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">branin</span><span class="o">.</span><span class="n">metadata</span><span class="p">)</span>
+
+<span class="c1"># Convenience accessors are also available.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">branin</span><span class="o">.</span><span class="n">min</span><span class="p">)</span>  <span class="c1"># value of the global minimum</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">branin</span><span class="o">.</span><span class="n">bounds</span><span class="p">)</span>  <span class="c1"># suggested input bounds</span>
+</pre></div>
+</div>
+<p>Functions can also be looked up by name, which is useful when the specific
+function to benchmark against is chosen dynamically (e.g. from a config file or
+command-line argument):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">benchmarking.evaluate</span><span class="w"> </span><span class="kn">import</span> <span class="n">evaluate</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">benchmarking.function_data</span><span class="w"> </span><span class="kn">import</span> <span class="n">function_data</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">evaluate</span><span class="p">(</span><span class="s2">&quot;branin&quot;</span><span class="p">,</span> <span class="p">[</span><span class="o">-</span><span class="mf">3.14</span><span class="p">,</span> <span class="mf">12.275</span><span class="p">])</span>
+<span class="n">metadata</span> <span class="o">=</span> <span class="n">function_data</span><span class="p">(</span><span class="s2">&quot;branin&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The full list of valid function names is available in
+<code class="docutils literal notranslate"><span class="pre">benchmarking.function_ids.function_ids</span></code>.</p>
+</section>
+<section id="making-changes-contributing">
+<h2>Making Changes &amp; Contributing<a class="headerlink" href="#making-changes-contributing" title="Link to this heading"></a></h2>
+<p>This project uses <a class="reference external" href="https://pre-commit.com/">pre-commit</a>, please make sure to install it before making any
+changes:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># After cloning the repository</span>
+pip<span class="w"> </span>install<span class="w"> </span>pre-commit
+<span class="nb">cd</span><span class="w"> </span>benchmarking
+pre-commit<span class="w"> </span>install
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Benchmarking Function Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="license.html" class="btn btn-neutral float-right" title="License" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, 2026 Iowa State University.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

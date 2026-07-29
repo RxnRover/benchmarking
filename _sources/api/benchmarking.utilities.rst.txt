@@ -1,0 +1,23 @@
+benchmarking.utilities namespace
+================================
+
+.. py:module:: benchmarking.utilities
+
+Submodules
+----------
+
+benchmarking.utilities.apply\_noise module
+------------------------------------------
+
+.. automodule:: benchmarking.utilities.apply_noise
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+benchmarking.utilities.generate\_box module
+-------------------------------------------
+
+.. automodule:: benchmarking.utilities.generate_box
+   :members:
+   :show-inheritance:
+   :undoc-members:

@@ -1,0 +1,46 @@
+benchmarking package
+====================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   benchmarking.functions
+   benchmarking.utilities
+
+Submodules
+----------
+
+benchmarking.evaluate module
+----------------------------
+
+.. automodule:: benchmarking.evaluate
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+benchmarking.function\_data module
+----------------------------------
+
+.. automodule:: benchmarking.function_data
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+benchmarking.function\_ids module
+---------------------------------
+
+.. automodule:: benchmarking.function_ids
+   :members:
+   :show-inheritance:
+   :undoc-members:
+
+Module contents
+---------------
+
+.. automodule:: benchmarking
+   :members:
+   :show-inheritance:
+   :undoc-members:

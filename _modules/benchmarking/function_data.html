@@ -1,0 +1,186 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>benchmarking.function_data &mdash; Benchmarking unknown documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=3f1b9271"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Benchmarking
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../readme.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../authors.html">Authors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/modules.html">Module Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Benchmarking</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">benchmarking.function_data</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for benchmarking.function_data</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Dict</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">benchmarking.functions.beale</span><span class="w"> </span><span class="kn">import</span> <span class="n">Beale</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">benchmarking.functions.booth</span><span class="w"> </span><span class="kn">import</span> <span class="n">Booth</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">benchmarking.functions.branin</span><span class="w"> </span><span class="kn">import</span> <span class="n">Branin</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">benchmarking.functions.bukin_n6</span><span class="w"> </span><span class="kn">import</span> <span class="n">BukinN6</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">benchmarking.functions.eggholder</span><span class="w"> </span><span class="kn">import</span> <span class="n">Eggholder</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">benchmarking.functions.goldstein_price</span><span class="w"> </span><span class="kn">import</span> <span class="n">GoldsteinPrice</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">benchmarking.functions.hartmann</span><span class="w"> </span><span class="kn">import</span> <span class="n">Hartmann3D</span><span class="p">,</span> <span class="n">Hartmann6D</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">benchmarking.functions.himmelblau</span><span class="w"> </span><span class="kn">import</span> <span class="n">Himmelblau</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">benchmarking.functions.holder_table</span><span class="w"> </span><span class="kn">import</span> <span class="n">HolderTable</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">benchmarking.functions.matyas</span><span class="w"> </span><span class="kn">import</span> <span class="n">Matyas</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">benchmarking.functions.rosenbrock</span><span class="w"> </span><span class="kn">import</span> <span class="n">Rosenbrock</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">benchmarking.functions.schwefel</span><span class="w"> </span><span class="kn">import</span> <span class="n">Schwefel</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">benchmarking.functions.shekel</span><span class="w"> </span><span class="kn">import</span> <span class="n">Shekel</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">benchmarking.functions.shubert</span><span class="w"> </span><span class="kn">import</span> <span class="n">Shubert</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">benchmarking.functions.six_hump_camel</span><span class="w"> </span><span class="kn">import</span> <span class="n">SixHumpCamel</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">benchmarking.functions.sphere</span><span class="w"> </span><span class="kn">import</span> <span class="n">Sphere</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">benchmarking.functions.styblinski_tang</span><span class="w"> </span><span class="kn">import</span> <span class="n">StyblinskiTang</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">benchmarking.functions.three_hump_camel</span><span class="w"> </span><span class="kn">import</span> <span class="n">ThreeHumpCamel</span>
+
+
+<div class="viewcode-block" id="function_data">
+<a class="viewcode-back" href="../../api/benchmarking.html#benchmarking.function_data.function_data">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">function_data</span><span class="p">(</span><span class="n">function_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>  <span class="c1"># pragma: no cover</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Helper function to retrieve function metadata based on function name.</span>
+
+<span class="sd">    :param function_name: Name of the function to use. This must exactly match</span>
+<span class="sd">                          the actual function name.</span>
+<span class="sd">    :type function_name: str</span>
+
+<span class="sd">    :raises ValueError: Invalid function name was provided.</span>
+
+<span class="sd">    :returns:</span>
+<span class="sd">    :rtype: Dict[str, Any]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="s2">&quot;beale&quot;</span> <span class="ow">in</span> <span class="n">function_name</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">Beale</span><span class="p">()</span><span class="o">.</span><span class="n">metadata</span>
+    <span class="k">elif</span> <span class="s2">&quot;booth&quot;</span> <span class="ow">in</span> <span class="n">function_name</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">Booth</span><span class="p">()</span><span class="o">.</span><span class="n">metadata</span>
+    <span class="k">elif</span> <span class="s2">&quot;branin&quot;</span> <span class="ow">in</span> <span class="n">function_name</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">Branin</span><span class="p">()</span><span class="o">.</span><span class="n">metadata</span>
+    <span class="k">elif</span> <span class="s2">&quot;bukin_n6&quot;</span> <span class="ow">in</span> <span class="n">function_name</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">BukinN6</span><span class="p">()</span><span class="o">.</span><span class="n">metadata</span>
+    <span class="k">elif</span> <span class="s2">&quot;eggholder&quot;</span> <span class="ow">in</span> <span class="n">function_name</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">Eggholder</span><span class="p">()</span><span class="o">.</span><span class="n">metadata</span>
+    <span class="k">elif</span> <span class="s2">&quot;goldstein_price&quot;</span> <span class="ow">in</span> <span class="n">function_name</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">GoldsteinPrice</span><span class="p">()</span><span class="o">.</span><span class="n">metadata</span>
+    <span class="k">elif</span> <span class="s2">&quot;hartmann_3d&quot;</span> <span class="ow">in</span> <span class="n">function_name</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">Hartmann3D</span><span class="p">()</span><span class="o">.</span><span class="n">metadata</span>
+    <span class="k">elif</span> <span class="s2">&quot;hartmann_6d&quot;</span> <span class="ow">in</span> <span class="n">function_name</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">Hartmann6D</span><span class="p">()</span><span class="o">.</span><span class="n">metadata</span>
+    <span class="k">elif</span> <span class="s2">&quot;himmelblau&quot;</span> <span class="ow">in</span> <span class="n">function_name</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">Himmelblau</span><span class="p">()</span><span class="o">.</span><span class="n">metadata</span>
+    <span class="k">elif</span> <span class="s2">&quot;holder_table&quot;</span> <span class="ow">in</span> <span class="n">function_name</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">HolderTable</span><span class="p">()</span><span class="o">.</span><span class="n">metadata</span>
+    <span class="k">elif</span> <span class="s2">&quot;matyas&quot;</span> <span class="ow">in</span> <span class="n">function_name</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">Matyas</span><span class="p">()</span><span class="o">.</span><span class="n">metadata</span>
+    <span class="k">elif</span> <span class="s2">&quot;rosenbrock&quot;</span> <span class="ow">in</span> <span class="n">function_name</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">Rosenbrock</span><span class="p">()</span><span class="o">.</span><span class="n">metadata</span>
+    <span class="k">elif</span> <span class="s2">&quot;schwefel&quot;</span> <span class="ow">in</span> <span class="n">function_name</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">Schwefel</span><span class="p">()</span><span class="o">.</span><span class="n">metadata</span>
+    <span class="k">elif</span> <span class="s2">&quot;shekel&quot;</span> <span class="ow">in</span> <span class="n">function_name</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">Shekel</span><span class="p">()</span><span class="o">.</span><span class="n">metadata</span>
+    <span class="k">elif</span> <span class="s2">&quot;shubert&quot;</span> <span class="ow">in</span> <span class="n">function_name</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">Shubert</span><span class="p">()</span><span class="o">.</span><span class="n">metadata</span>
+    <span class="k">elif</span> <span class="s2">&quot;six_hump_camel&quot;</span> <span class="ow">in</span> <span class="n">function_name</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">SixHumpCamel</span><span class="p">()</span><span class="o">.</span><span class="n">metadata</span>
+    <span class="k">elif</span> <span class="s2">&quot;sphere&quot;</span> <span class="ow">in</span> <span class="n">function_name</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">Sphere</span><span class="p">()</span><span class="o">.</span><span class="n">metadata</span>
+    <span class="k">elif</span> <span class="s2">&quot;styblinski_tang&quot;</span> <span class="ow">in</span> <span class="n">function_name</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">StyblinskiTang</span><span class="p">()</span><span class="o">.</span><span class="n">metadata</span>
+    <span class="k">elif</span> <span class="s2">&quot;three_hump_camel&quot;</span> <span class="ow">in</span> <span class="n">function_name</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">ThreeHumpCamel</span><span class="p">()</span><span class="o">.</span><span class="n">metadata</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+            <span class="s2">&quot;Invalid function name given: </span><span class="si">{}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">function_name</span><span class="p">)</span>
+        <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">result</span></div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, 2026 Iowa State University.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
