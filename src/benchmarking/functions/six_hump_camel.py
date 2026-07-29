@@ -4,7 +4,7 @@ from benchmarking.functions.BenchmarkingFunction import BenchmarkingFunction
 
 
 class SixHumpCamel(BenchmarkingFunction):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
 
         self.set_function(six_hump_camel)
@@ -23,8 +23,11 @@ def six_hump_camel(xs: List[float]) -> float:
     Six-hump camel function from https://www.sfu.ca/~ssurjano/camel6.html.
 
     Function in LaTeX format:
-    f(x) = (4 - 2.1 x_1^2 + \frac{x_1^4}{3}) x_1^2 + x_1 x_2 +
-           (-4 + 4 x_2^2) x_2^2
+
+    .. math::
+
+        f(x) = (4 - 2.1 x_1^2 + \\frac{x_1^4}{3}) x_1^2 + x_1 x_2 +
+               (-4 + 4 x_2^2) x_2^2
 
     :param xs: Parameter list
     :type xs: float

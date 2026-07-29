@@ -1,7 +1,9 @@
 import numpy as np
 
 
-def generate_box(bounds, numPoints):
+def generate_box(
+    bounds: list[list[float]], numPoints: int
+) -> list[np.typing.ndarray]:
     """Generate a box with the given bounds.
 
     Bounds must be given as a Python 2D list of shape n x 2, where n

@@ -4,7 +4,7 @@ from benchmarking.functions.BenchmarkingFunction import BenchmarkingFunction
 
 
 class Beale(BenchmarkingFunction):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
 
         self.set_function(beale)
@@ -21,11 +21,14 @@ def beale(xs: List[float]) -> float:
 
     Beale function from https://www.sfu.ca/~ssurjano/beale.html.
 
-    Input domain: 2D square x_i = [-4.5, 4.5] for all i = 1, 2.
+    Input domain: 2D square :math:`x_i = [-4.5, 4.5]` for all i = 1, 2.
 
     Function in LaTeX format:
-    f(x) = (1.5 - x_1 + x_1 x_2)^2 + (2.25 - x_1 + x_1 x_2^2)^2 +
-           (2.625 - x_1 + x_1 x_2^3)^2
+
+    .. math::
+
+        f(x) = (1.5 - x_1 + x_1 x_2)^2 + (2.25 - x_1 + x_1 x_2^2)^2 +
+               (2.625 - x_1 + x_1 x_2^3)^2
 
     :param xs: Parameter list
     :type xs: List[float]

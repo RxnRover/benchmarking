@@ -1,5 +1,6 @@
-============
-Contributors
-============
+##############
+ Contributors
+##############
 
-* Zachery Crandall (@zachcran)
+- dulithaprasanna <dulithaprasanna@gmail.com>
+- zachcran <zachcran@iastate.edu>
